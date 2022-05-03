@@ -38,28 +38,7 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/gzmaia/Documents/Entra21/Exercicio&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Exercicio17">
-    <configuration name="Ecercicio15" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Ecercicio15" />
-      <module name="Exercicio" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Exercicio14" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercicio14" />
-      <module name="Exercicio" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Exercicio16" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercicio16" />
-      <module name="Exercicio" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Exercicio22">
     <configuration name="Exercicio17" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercicio17" />
       <module name="Exercicio" />
@@ -67,8 +46,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Exercico8" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercico8" />
+    <configuration name="Exercicio18" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercicio18" />
+      <module name="Exercicio" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercicio19" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercicio19" />
+      <module name="Exercicio" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercicio20" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercicio20" />
+      <module name="Exercicio" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercicio21" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercicio21" />
+      <module name="Exercicio" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercicio22" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercicio22" />
       <module name="Exercicio" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -76,11 +83,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Exercicio22" />
+        <item itemvalue="Application.Exercicio21" />
+        <item itemvalue="Application.Exercicio20" />
+        <item itemvalue="Application.Exercicio19" />
         <item itemvalue="Application.Exercicio17" />
-        <item itemvalue="Application.Exercico8" />
-        <item itemvalue="Application.Exercicio16" />
-        <item itemvalue="Application.Ecercicio15" />
-        <item itemvalue="Application.Exercicio14" />
       </list>
     </recent_temporary>
   </component>
@@ -109,5 +116,8 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Exercicio$Exercicio18.ic" NAME="Exercicio18 Coverage Results" MODIFIED="1651532172146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
