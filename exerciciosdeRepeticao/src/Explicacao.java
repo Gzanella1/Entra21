@@ -6,7 +6,7 @@ public class Explicacao {
 
         for (String palavra : palavras) {
 
-            for (int i = 0; i <= palavra.length(); i++) {
+            for (int i = 0; i < palavra.length(); i++) {
                 achou = palavra.charAt(i) == letraProibida;
 
                 if (achou) {
