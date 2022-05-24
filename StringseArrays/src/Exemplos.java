@@ -13,10 +13,8 @@ public class Exemplos {
         //exemplo5();
         //exemplo6();
         //exemplo7();
-        //exemplo8();
-        //exemplo9();
-        //exemplo10();
-        exemplo11();
+        exemplo8();
+
 
 
     }
@@ -121,79 +119,8 @@ public class Exemplos {
     }
 
     //Código Morse
-    public static void desencriptar() {
-        in.nextLine();
-        System.out.print("Digite uma expressão encriptada com código morse: ");
-        String palavra = in.nextLine();
-        String decifrado = palavra.replace("-.-.--", "!").replace("--..--", ",")
-                .replace(".----", "1").replace("..---", "2").replace("...--", "3")
-                .replace("....-", "4").replace(".....", "5").replace("-....", "6")
-                .replace("--...", "7").replace("---..", "8").replace("----.", "9")
-                .replace("-----", "0").replace("-...", "b").replace("-.-.", "c")
-                .replace("..-.", "f").replace("....", "h").replace(".---", "j")
-                .replace(".-..", "l").replace(".--.", "p").replace("--.-", "q")
-                .replace("...-", "v").replace("-..-", "x").replace("-.--", "y")
-                .replace("--..", "z").replace("-..", "d").replace("--.", "g")
-                .replace("-.-", "k").replace("---", "o").replace(".-.", "r")
-                .replace("...", "s").replace("..-", "u").replace(".--", "w")
-                .replace(".-", "a").replace("..", "i").replace("--", "m")
-                .replace("-.", "n").replace(".", "e").replace("-", "t")
-                .replace("*", " ");
-        //System.out.println(decifrado);
-        for (int i = 0; i < decifrado.length(); i++) {
-            if (decifrado.charAt(i) != '|') {
-                System.out.print(decifrado.charAt(i));
-            }
-        }
-    }
 
-    public static void encriptar() {
-        int par = 0;
-        in.nextLine();
-        System.out.print("Digite uma frase para encriptar: ");
-        String palavra = in.nextLine();
-        char[] palavrab = new char[palavra.length() * 2];
-        for (int i = 0; i < palavra.length() * 2; i++) {
-            if (i % 2 == 0) {
-                palavrab[i] = palavra.charAt(par);
-                par++;
-            } else {
-                palavrab[i] = '|';
-            }
-        }
-        palavra = String.valueOf(palavrab);
-        String decifrado = palavra.replace("1", ".----").replace("2", "..---").replace("3", "...--")
-                .replace("4", "....-").replace("5", ".....").replace("6", "-....")
-                .replace("7", "--...").replace("8", "---..").replace("9", "----.")
-                .replace("0", "-----").replace("b", "-...").replace("c", "-.-.")
-                .replace("f", "..-.").replace("h", "....").replace("j", ".---")
-                .replace("l", ".-..").replace("p", ".--.").replace("q", "--.-")
-                .replace("v", "...-").replace("x", "-..-").replace("y", "-.--")
-                .replace("z", "--..").replace("d", "-..").replace("g", "--.")
-                .replace("k", "-.-").replace("o", "---").replace("r", ".-.")
-                .replace("s", "...").replace("u", "..-").replace("w", ".--")
-                .replace("a", ".-").replace("i", "..").replace("m", "--")
-                .replace("n", "-.").replace("e", ".").replace("t", "-")
-                .replace(" ", "*");
-
-        System.out.println(decifrado);
-
-    }
-
-    public static void exemplo10() {
-        System.out.println("Digite o valor corespondente: \n1-Encriptar \n2-Desencritpar");
-        int valor = in.nextInt();
-        if (valor == 1) {
-            encriptar();
-        } else if (valor == 2) {
-            desencriptar();
-        } else {
-            System.out.println("Número invalido!");
-        }
-//.--.|.-|.-.|.-|-...|.|-.|...|-.-.--|*|...-|---|-.-.|.|...|*|.--.|.-|...|...|.-|.-.|.-|--|*|-..|.-|*|.--.|.-.|..|--|.|..|.-.|.-|*|..-.|.-|...|.|-.-.--|
-    }
-
-    public static void exemplo11() {
+    public static void exemplo8() {
         while (true) {
         boolean valida = false;
         String frase = "";
@@ -217,12 +144,7 @@ public class Exemplos {
             in.nextLine();
             System.out.print("Digite algo em código morse para ser desencriptado: ");
             frase = in.nextLine();
-            String desencriptado = Desencriptar(frase);
-            for (int i = 0; i < desencriptado.length(); i++) {
-                if (desencriptado.charAt(i) != '|') {
-                    System.out.print(desencriptado.charAt(i));
-                }
-            }
+            System.out.println(Desencriptar(frase));
             System.out.println();
         }
             System.out.print("DESEJA TENTAR NOVAMENTE? (Y/N): ");
@@ -242,48 +164,37 @@ public class Exemplos {
         }
     }
     public static String Encriptar(String frase){
-        int par = 0;
-        char[] palavrab = new char[frase.length() * 2];
-        for (int i = 0; i < frase.length() * 2; i++) {
-            if (i % 2 == 0) {
-                palavrab[i] = frase.charAt(par);
-                par++;
-            } else {
-                palavrab[i] = '|';
-            }
-        }
-        frase = String.valueOf(palavrab);
         String encriptada = frase.replace("1", ".----").replace("2", "..---").replace("3", "...--")
-                .replace("4", "....-").replace("5", ".....").replace("6", "-....")
-                .replace("7", "--...").replace("8", "---..").replace("9", "----.")
-                .replace("0", "-----").replace("b", "-...").replace("c", "-.-.")
-                .replace("f", "..-.").replace("h", "....").replace("j", ".---")
-                .replace("l", ".-..").replace("p", ".--.").replace("q", "--.-")
-                .replace("v", "...-").replace("x", "-..-").replace("y", "-.--")
-                .replace("z", "--..").replace("d", "-..").replace("g", "--.")
-                .replace("k", "-.-").replace("o", "---").replace("r", ".-.")
-                .replace("s", "...").replace("u", "..-").replace("w", ".--")
-                .replace("a", ".-").replace("i", "..").replace("m", "--")
-                .replace("n", "-.").replace("e", ".").replace("t", "-")
-                .replace(" ", "*");
+                .replace("4", "....-|").replace("5", ".....|").replace("6", "-....|")
+                .replace("7", "--...|").replace("8", "---..|").replace("9", "----.|")
+                .replace("0", "-----|").replace("b", "-...|").replace("c", "-.-.|")
+                .replace("f", "..-.|").replace("h", "....|").replace("j", ".---|")
+                .replace("l", ".-..|").replace("p", ".--.|").replace("q", "--.-|")
+                .replace("v", "...-|").replace("x", "-..-|").replace("y", "-.--|")
+                .replace("z", "--..|").replace("d", "-..|").replace("g", "--.|")
+                .replace("k", "-.-|").replace("o", "---|").replace("r", ".-.|")
+                .replace("s", "...|").replace("u", "..-|").replace("w", ".--|")
+                .replace("a", ".-|").replace("i", "..|").replace("m", "--|")
+                .replace("n", "-.|").replace("e", ".|").replace("t", "-|")
+                .replace(" ", "*|");
         return encriptada;
     }
 
     public static String Desencriptar(String frase){
         String decifrado = frase.replace("-.-.--", "!").replace("--..--", ",")
-                .replace(".----", "1").replace("..---", "2").replace("...--", "3")
-                .replace("....-", "4").replace(".....", "5").replace("-....", "6")
-                .replace("--...", "7").replace("---..", "8").replace("----.", "9")
-                .replace("-----", "0").replace("-...", "b").replace("-.-.", "c")
-                .replace("..-.", "f").replace("....", "h").replace(".---", "j")
-                .replace(".-..", "l").replace(".--.", "p").replace("--.-", "q")
-                .replace("...-", "v").replace("-..-", "x").replace("-.--", "y")
-                .replace("--..", "z").replace("-..", "d").replace("--.", "g")
-                .replace("-.-", "k").replace("---", "o").replace(".-.", "r")
-                .replace("...", "s").replace("..-", "u").replace(".--", "w")
-                .replace(".-", "a").replace("..", "i").replace("--", "m")
-                .replace("-.", "n").replace(".", "e").replace("-", "t")
-                .replace("*", " ");
+                .replace(".----|", "1").replace("..---|", "2").replace("...--|", "3")
+                .replace("....-|", "4").replace(".....|", "5").replace("-....|", "6")
+                .replace("--...|", "7").replace("---..|", "8").replace("----.|", "9")
+                .replace("-----|", "0").replace("-...|", "b").replace("-.-.|", "c")
+                .replace("..-.|", "f").replace("....|", "h").replace(".---|", "j")
+                .replace(".-..|", "l").replace(".--.|", "p").replace("--.-|", "q")
+                .replace("...-|", "v").replace("-..-|", "x").replace("-.--|", "y")
+                .replace("--..|", "z").replace("-..|", "d").replace("--.|", "g")
+                .replace("-.-|", "k").replace("---|", "o").replace(".-.|", "r")
+                .replace("...|", "s").replace("..-|", "u").replace(".--|", "w")
+                .replace(".-|", "a").replace("..|", "i").replace("--|", "m")
+                .replace("-.|", "n").replace(".|", "e").replace("-|", "t")
+                .replace("*|", " ");
         return decifrado;
     }
 }
