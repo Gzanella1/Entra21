@@ -16,7 +16,6 @@ public class Exemplos {
         exemplo8();
 
 
-
     }
 
     public static void exemplo1() {
