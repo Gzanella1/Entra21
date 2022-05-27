@@ -1,16 +1,17 @@
 package classes;
 
-public class XBurguer extends Lanche {
+public class XBurguer extends Sanduiche {
     public boolean aberto;
+
 
     public XBurguer() {
         this.addIngredientes("Hamburguer");
         this.addIngredientes("Milho");
         this.addIngredientes("queijo");
         this.addIngredientes("presunto");
-        this.addIngredientes("pão");
         this.tipo = "Xburguer";
     }
+
 
     @Override
     public void montarcomanda() {
@@ -22,3 +23,7 @@ public class XBurguer extends Lanche {
 
     }
 }
+
+
+
+
