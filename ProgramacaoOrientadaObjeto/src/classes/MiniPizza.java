@@ -16,7 +16,7 @@ public class MiniPizza extends Lanche {
         this.addIngredientes("Tomate");
         this.addIngredientes("Massa");
         this.tipo = "Mini Pizza";
-    }
+    }// apagar e pedir qual ele que la na main
 
     //override re escreve um metodo em outra classe no casso a classe lanche
     @Override
