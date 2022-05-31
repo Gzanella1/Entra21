@@ -2,7 +2,7 @@ package classes;
 
 public abstract class Sanduiche extends Lanche {
     //+adicionais:String[]
-    public String[] adicionais = new String[10];
+    private String[] adicionais = new String[10];
 
     //metodo
     public void adicionarAdicionais(String adicional) {
@@ -27,7 +27,16 @@ public abstract class Sanduiche extends Lanche {
             }
         }
     }
+    public void setAdicionais(String[] adicionais){
+        this.adicionais=adicionais;
+
+    }public String[] getAdicionais(){
+        return this.adicionais;
+    }
 }
+
+
+
 
 
 //USE O SHIFT + ALT  E SELECIONA AS LINHAS QUE VOCE QUE DIGITAR AO MESMO TEMPO

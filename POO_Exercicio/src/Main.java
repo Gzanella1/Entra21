@@ -12,16 +12,16 @@ public class Main {
             Nlinhas = in.nextInt();
             System.out.print("Digite o número de cadeiras por linha: ");
             Ncadeiras = in.nextInt();
-            if(Nlinhas>26||Ncadeiras>10){
+            if(Nlinhas>26||Ncadeiras>10) {
                 System.out.println("Quantidade inválida!");
                 System.out.print("Digite o número de linha de cadeiras do avião: ");
                 Nlinhas = in.nextInt();
                 System.out.print("Digite o número de cadeiras por linha: ");
                 Ncadeiras = in.nextInt();
+            }
                 if((Nlinhas>0&&Nlinhas<27)&&(Ncadeiras>0&&Ncadeiras<=10)){
                     break;
                 }
-            }
         }
         in.nextLine();
         Voo voo = new Voo(Nlinhas, Ncadeiras);

@@ -3,7 +3,7 @@ package classes;
 public abstract class Lanche {
     //temos uma lista vaga para 10 ingredientes como
     //como ele e publico usa o public
-    public String[] ingredientes = new String[10];
+    private String[] ingredientes = new String[10];
     //add um valor a Xsalada
     public double valor;
     public String tipo;
@@ -22,7 +22,11 @@ public abstract class Lanche {
     }
 
     public void montarcomanda() {
-        System.out.println("====" + this.tipo + "====");
+        if(this instanceof MiniPizza){
+            System.out.println("====" + this.tipo + "-"+((MiniPizza)this).getSabor());
+        }else {
+            System.out.println("====" + this.tipo + "====");
+        }
         System.out.printf("valor: R$%.2f\n", this.valor);
         System.out.println("Ingrediente-");
         for (String ingrediente : this.ingredientes) {
@@ -32,8 +36,8 @@ public abstract class Lanche {
         }
 
     }
-
-
 }
+
+
 
 

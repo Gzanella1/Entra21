@@ -1,7 +1,7 @@
 package classes;
 
 public class XBurguer extends Sanduiche {
-    public boolean aberto;
+    private boolean aberto;
 
 
     public XBurguer() {
@@ -20,7 +20,13 @@ public class XBurguer extends Sanduiche {
         if (this.aberto) {
             System.out.println("--LANCHE ABERTO--");
         }
-
+    }
+    public void setAberto(boolean aberto){
+        this.aberto=aberto;
+    }
+    //get retorna
+    public boolean isAberto() {
+        return this.aberto;
     }
 }
 
