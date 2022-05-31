@@ -139,7 +139,8 @@ public class Main {
 
 
 //set propriedade colocar o valo em uma propriedade
-// get ou is buscar o valor da propriendade
+// get ou is buscar o valor da propriendade geralmente quando eu for printar
+
 
 
 
