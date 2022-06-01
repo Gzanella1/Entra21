@@ -1,7 +1,5 @@
-package classes;
+package classes.lanche;
 
-import java.sql.SQLOutput;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class MiniPizza extends Lanche {

@@ -1,4 +1,4 @@
-package classes;
+package classes.lanche;
 
 public abstract class Sanduiche extends Lanche {
     //+adicionais:String[]

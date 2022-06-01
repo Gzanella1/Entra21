@@ -1,4 +1,4 @@
-package classes;
+package classes.lanche;
 
 public abstract class Lanche {
     //temos uma lista vaga para 10 ingredientes como

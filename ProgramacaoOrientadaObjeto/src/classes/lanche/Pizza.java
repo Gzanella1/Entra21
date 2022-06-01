@@ -1,4 +1,4 @@
-package classes;
+package classes.lanche;
 
 public class Pizza extends MiniPizza {
     private String tamanho;

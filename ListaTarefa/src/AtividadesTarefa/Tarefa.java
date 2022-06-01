@@ -9,16 +9,11 @@ public class Tarefa {
 
     public Tarefa() {
         this.setUuid(UUID.randomUUID().toString());
-        this.setNome();
-        this.setDescricao();
-        this.setCompleta();
-        this.setOrdem();
+
     }
 
     public void Completa() {
     setCompleta(true);
-
-
 
     }
 

@@ -1,13 +1,11 @@
-import classes.*;
-
-import javax.sound.midi.Soundbank;
-import java.sql.SQLOutput;
+import classes.lanche.*;
 import java.util.Scanner;
-
 public class Main {
     public static Scanner in = new Scanner(System.in);
-
     public static void main(String[] args) {
+
+    }
+    private static void montarLanche(){ 
         System.out.println("-MENU: Escolha uma opção:-");
         System.out.println("1-XSalada");
         System.out.println("2-XBurguer");
@@ -80,37 +78,37 @@ public class Main {
             System.out.println("5- Prtuguesa");
             int sabor= in.nextInt();
             in.nextLine();
-           MiniPizza miniPizza= ((MiniPizza) lanche);
-           switch (sabor){
-               case 1:
-                   miniPizza.adicionarSaborEngrediente("4 queijos");
-                   break;
-               case 2:
-                   miniPizza.adicionarSaborEngrediente("Calabresa");
-                   break;
-               case 3:
-                   miniPizza.adicionarSaborEngrediente("Frango c/ catupiry");
-                   break;
-               case 4:
-                   miniPizza.adicionarSaborEngrediente("Marguerita");
-                   break;
-               case 5:
-                   miniPizza.adicionarSaborEngrediente("Portuguesa");
-                   break;
-               default:
-                   System.err.println("Escolha um sabor válido");
+            MiniPizza miniPizza= ((MiniPizza) lanche);
+            switch (sabor){
+                case 1:
+                    miniPizza.adicionarSaborEngrediente("4 queijos");
+                    break;
+                case 2:
+                    miniPizza.adicionarSaborEngrediente("Calabresa");
+                    break;
+                case 3:
+                    miniPizza.adicionarSaborEngrediente("Frango c/ catupiry");
+                    break;
+                case 4:
+                    miniPizza.adicionarSaborEngrediente("Marguerita");
+                    break;
+                case 5:
+                    miniPizza.adicionarSaborEngrediente("Portuguesa");
+                    break;
+                default:
+                    System.err.println("Escolha um sabor válido");
 
-           }
-           if (lanche instanceof Pizza){
-               System.out.println("Informe o tamaho da Pizza:");
-               System.out.println("XS - Broto");
-               System.out.println("SM - pequena");
-               System.out.println("MD - media");
-               System.out.println("LG - grande");
-               System.out.println("XL - familia");
-               ((Pizza)lanche).setTamanho(in.nextLine().toUpperCase());
+            }
+            if (lanche instanceof Pizza){
+                System.out.println("Informe o tamaho da Pizza:");
+                System.out.println("XS - Broto");
+                System.out.println("SM - pequena");
+                System.out.println("MD - media");
+                System.out.println("LG - grande");
+                System.out.println("XL - familia");
+                ((Pizza)lanche).setTamanho(in.nextLine().toUpperCase());
 
-           }
+            }
             System.out.println("borda recheada? (S/N)");
             String aberto= in.nextLine();
             ((MiniPizza) lanche).setBordarecheada(aberto.equalsIgnoreCase("S"));
@@ -123,15 +121,8 @@ public class Main {
         System.out.print("Informe o valor do " + lanche.tipo + ": R$");
         lanche.valor = in.nextDouble();
         lanche.montarcomanda();
-
-        //classe é um molde do objeto.
-        // o objeto é uma instancia da classe,
-        // instancia é uma aplicação
-        // construtor é uma função da classe que nao tem nenhum retorno
-        //classe abstrata define um compartamento generico, e n pode ser istanciada
-        //classe derivada, podem ser instanciada
-        //herança
     }
+
 }
 
 

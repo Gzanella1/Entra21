@@ -1,4 +1,4 @@
-package classes;
+package classes.lanche;
 
 public class XSalada extends XBurguer {
 
