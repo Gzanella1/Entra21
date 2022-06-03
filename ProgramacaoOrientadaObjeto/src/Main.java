@@ -1,11 +1,15 @@
 import classes.lanche.*;
+
 import java.util.Scanner;
+
 public class Main {
     public static Scanner in = new Scanner(System.in);
+
     public static void main(String[] args) {
 
     }
-    private static void montarLanche(){ 
+
+    private static void montarLanche() {
         System.out.println("-MENU: Escolha uma opção:-");
         System.out.println("1-XSalada");
         System.out.println("2-XBurguer");
@@ -37,7 +41,7 @@ public class Main {
                 lanche = new MiniPizza();
                 break;
             case 6:
-                lanche= new Pizza();
+                lanche = new Pizza();
                 break;
             default:
                 System.out.println("Escolha uma opção válida!");
@@ -55,8 +59,8 @@ public class Main {
                     //ta pegando o que o usuario digitou e jogando na lista
                     ((Sanduiche) lanche).adicionarAdicionais(in.nextLine());
                     System.out.println("Deseja adicionar mais adicionais? (S/N): ");
-                    String parada= in.nextLine();
-                    if(parada.equalsIgnoreCase("N")){
+                    String parada = in.nextLine();
+                    if (parada.equalsIgnoreCase("N")) {
                         break;
                     }
                 }
@@ -67,7 +71,8 @@ public class Main {
             System.out.print("Lanche aberto? (S/N): ");
             in.nextLine();
             String aberto2 = in.nextLine();
-            ((XBurguer) lanche).setAberto(aberto2.equalsIgnoreCase("S")); ; //aberto == 1
+            ((XBurguer) lanche).setAberto(aberto2.equalsIgnoreCase("S"));
+            ; //aberto == 1
 
         } else {
             System.out.println("Escolha o sabor da Pizza:");
@@ -76,10 +81,10 @@ public class Main {
             System.out.println("3- Frango com Catupiry");
             System.out.println("4- Marguerita");
             System.out.println("5- Prtuguesa");
-            int sabor= in.nextInt();
+            int sabor = in.nextInt();
             in.nextLine();
-            MiniPizza miniPizza= ((MiniPizza) lanche);
-            switch (sabor){
+            MiniPizza miniPizza = ((MiniPizza) lanche);
+            switch (sabor) {
                 case 1:
                     miniPizza.adicionarSaborEngrediente("4 queijos");
                     break;
@@ -99,34 +104,30 @@ public class Main {
                     System.err.println("Escolha um sabor válido");
 
             }
-            if (lanche instanceof Pizza){
+            if (lanche instanceof Pizza) {
                 System.out.println("Informe o tamaho da Pizza:");
                 System.out.println("XS - Broto");
                 System.out.println("SM - pequena");
                 System.out.println("MD - media");
                 System.out.println("LG - grande");
                 System.out.println("XL - familia");
-                ((Pizza)lanche).setTamanho(in.nextLine().toUpperCase());
+                ((Pizza) lanche).setTamanho(in.nextLine().toUpperCase());
 
             }
             System.out.println("borda recheada? (S/N)");
-            String aberto= in.nextLine();
+            String aberto = in.nextLine();
             ((MiniPizza) lanche).setBordarecheada(aberto.equalsIgnoreCase("S"));
-            if(miniPizza.isBordarecheada()){
+            if (miniPizza.isBordarecheada()) {
                 System.out.println("qual o sabor da borda: ");
                 miniPizza.setSaborborda(in.nextLine());
             }
 
         }
-        System.out.print("Informe o valor do " + lanche.tipo + ": R$");
-        lanche.valor = in.nextDouble();
-        lanche.montarcomanda();
+        System.out.print("Informe o valor do " + lanche.getTipo() + ": R$");
+        lanche.setValor(in.nextDouble());
     }
 
 }
-
-
-
 
 
 //set propriedade colocar o valo em uma propriedade

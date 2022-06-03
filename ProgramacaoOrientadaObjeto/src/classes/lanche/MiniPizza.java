@@ -13,7 +13,7 @@ public class MiniPizza extends Lanche {
         this.addIngredientes("Molho de tomate");
         ;
         this.addIngredientes("Massa");
-        this.tipo = "Mini Pizza";
+        this.setTipo("Mini Pizza");
     }
 
     //metodo que não retorna nada
@@ -45,14 +45,7 @@ public class MiniPizza extends Lanche {
     }
 
     //override re escreve um metodo em outra classe no casso a classe lanche
-    @Override
-    public void montarcomanda() {
-        super.montarcomanda();
-        if (this.isBordarecheada()) {
-            System.out.println("--COM BORDA " + this.getSaborborda().toUpperCase() + "--");
 
-        }
-    }
 
     public void setBordarecheada(boolean bordarecheada) {
         this.bordarecheada = bordarecheada;
@@ -69,10 +62,13 @@ public class MiniPizza extends Lanche {
     public String getSaborborda() {
         return this.saborborda;
     }
-    public void setSabor(String sabor){
-        this.saborborda=sabor;
 
-    }public String getSabor(){
+    public void setSabor(String sabor) {
+        this.saborborda = sabor;
+
+    }
+
+    public String getSabor() {
         return this.sabor;
     }
 }

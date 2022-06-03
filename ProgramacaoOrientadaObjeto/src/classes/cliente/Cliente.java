@@ -6,14 +6,9 @@ public class Cliente {
     private String nome;
     private Pedido pedido;
 
-   public Cliente(){
-       this.setPedido(new Pedido());
-   }
-
-
-
-
-
+    public Cliente() {
+        this.setPedido(new Pedido());
+    }
 
     public String getNome() {
         return nome;

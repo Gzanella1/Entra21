@@ -16,27 +16,15 @@ public abstract class Sanduiche extends Lanche {
         }
     }
 
-    public void montarComanda() {
-        super.montarcomanda();
-        if (this.adicionais[0] != null) {
-            System.out.println("-ADICIONAIS-");
-            for (String adicional : this.adicionais) {
-                if (adicional != null) {
-                    System.out.println(adicional);
-                }
-            }
-        }
-    }
-    public void setAdicionais(String[] adicionais){
-        this.adicionais=adicionais;
+    public void setAdicionais(String[] adicionais) {
+        this.adicionais = adicionais;
 
-    }public String[] getAdicionais(){
+    }
+
+    public String[] getAdicionais() {
         return this.adicionais;
     }
 }
-
-
-
 
 
 //USE O SHIFT + ALT  E SELECIONA AS LINHAS QUE VOCE QUE DIGITAR AO MESMO TEMPO

@@ -5,8 +5,12 @@ public abstract class Lanche {
     //como ele e publico usa o public
     private String[] ingredientes = new String[10];
     //add um valor a Xsalada
-    public double valor;
-    public String tipo;
+    private double valor;
+    private String tipo;
+
+    public String[] getIngredientes(){
+        return ingredientes;
+    }
 
     //adicional coso o cliente queira
     public void addIngredientes(String ingrediente) {
@@ -21,20 +25,20 @@ public abstract class Lanche {
         }
     }
 
-    public void montarcomanda() {
-        if(this instanceof MiniPizza){
-            System.out.println("====" + this.tipo + "-"+((MiniPizza)this).getSabor());
-        }else {
-            System.out.println("====" + this.tipo + "====");
-        }
-        System.out.printf("valor: R$%.2f\n", this.valor);
-        System.out.println("Ingrediente-");
-        for (String ingrediente : this.ingredientes) {
-            if (ingrediente != null) {
-                System.out.println(ingrediente);
-            }
-        }
 
+    public double getValor() {
+        return valor;
+    }
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 }
 
