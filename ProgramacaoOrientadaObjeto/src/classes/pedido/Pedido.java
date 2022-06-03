@@ -1,19 +1,28 @@
 package classes.pedido;
+
 import classes.lanche.*;
+
 public class Pedido {
     //criando uma lista de objetos da classe lanche
     private Lanche[] lanche = new Lanche[10];
+
     public Lanche[] getLanche() {
         return lanche;
     }
+
     public void setLanche(Lanche[] lanche) {
         this.lanche = lanche;
     }
+
     public void imprimirComanda() {
-        //checa se todas as posições estão nulas, oi se possui algum pedido
+
+
+        //checa se todas as posições estão nulas, ou se possui algum pedido
         for (Lanche l : this.getLanche()) {
+            //verifica se a posição a sima é nula
             if (l != null) {
-                //se não for nulo 
+                //se não for nulo
+                //checa se é uma minipizza e uma pizza(pq pizza extend da mini pizza)
                 if (l instanceof MiniPizza) {
                     MiniPizza mp = ((MiniPizza) l);
                     System.out.println("====" + l.getTipo() + "-" + ((MiniPizza) l).getSabor());
@@ -25,13 +34,15 @@ public class Pedido {
                     }
                 } else {
                     System.out.println("====" + l.getTipo() + "====");
-                }if (l instanceof XBurguer){
-                    if (((XBurguer)l).isAberto()){
-                            System.out.println("--LANCHE ABERTO--");
+                }
+                if (l instanceof XBurguer) {
+                    if (((XBurguer) l).isAberto()) {
+                        System.out.println("--LANCHE ABERTO--");
                     }
                 }
                 System.out.printf("valor: R$%.2f\n", l.getValor());
                 System.out.println("Ingrediente-");
+                //percore todos os ingredientes do objeto
                 for (String ingrediente : l.getIngredientes()) {
                     if (ingrediente != null) {
                         System.out.println(ingrediente);
@@ -49,9 +60,8 @@ public class Pedido {
                     }
                 }
             }
-
         }
-        System.out.printf("Valor total do pedido: R$%.2f\n",this.calcularValorTotal());
+        System.out.printf("Valor total do pedido: R$%.2f\n", this.calcularValorTotal());
         System.out.println("-------------------------------");
     }
 

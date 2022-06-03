@@ -64,7 +64,7 @@ public class MiniPizza extends Lanche {
     }
 
     public void setSabor(String sabor) {
-        this.saborborda = sabor;
+        this.sabor = sabor;
 
     }
 
