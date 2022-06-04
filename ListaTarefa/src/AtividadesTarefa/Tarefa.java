@@ -7,14 +7,14 @@ public class Tarefa {
     private boolean completa;
     private int ordem;
 
+    private Checklistitem[] checklist;
+
     public Tarefa() {
         this.setUuid(UUID.randomUUID().toString());
-
     }
 
     public void Completa() {
     setCompleta(true);
-
     }
 
 
@@ -50,12 +50,19 @@ public class Tarefa {
     }
 
 
+    public int getOrdem() {
+        return ordem;
+    }
 
+    public Checklistitem[] getChecklist() {
+        return checklist;
+    }
 
-
-
-
-
-
+    public void setChecklist(Checklistitem[] checklist) {
+        this.checklist = checklist;
+    }
 }
 
+//qud for associação nao tem atributos em nenhumas das classes
+//herança usa extends
+//com
