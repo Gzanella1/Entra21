@@ -3,20 +3,22 @@ package AtividadesTarefa;
 import java.util.UUID;
 
 public class Checklistitem {
+    //Atributos
     private String uuid;
     private String nome;
     private String descricao;
     private boolean completa;
-    private int ordem;
 
-    public Checklistitem() {
+
+    public Checklistitem() {//construtor
         this.setUuid(UUID.randomUUID().toString());
     }
-
+    //Metodos
     public void completar() {
         setCompleta(true);
     }
 
+    //Get e set
     public String getUuid() {
         return uuid;
     }
@@ -49,11 +51,5 @@ public class Checklistitem {
         this.completa = completa;
     }
 
-    public int getOrdem() {
-        return ordem;
-    }
 
-    public void setOrdem(int ordem) {
-        this.ordem = ordem;
-    }
 }

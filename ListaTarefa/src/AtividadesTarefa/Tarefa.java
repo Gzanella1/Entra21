@@ -1,5 +1,7 @@
 package AtividadesTarefa;
+
 import java.util.UUID;
+
 public class Tarefa {
     private String uuid;
     private String nome;
@@ -14,37 +16,70 @@ public class Tarefa {
     }
 
     public void Completa() {
-    setCompleta(true);
+        this.setCompleta(true);
+        for (Checklistitem item : this.getChecklist()) {
+            if (item != null) {
+                item.completar();
+            }
+        }
+    }
+    public boolean temchecklist() {
+        return this.getChecklist() != null;
+    }
+
+    public void criarChecklist(int tamanho) {
+        this.setChecklist(new Checklistitem[tamanho]);
+    }
+
+    public boolean adicionarChecklist(Checklistitem item) {
+        for (int i = 0; i < this.getChecklist().length; i++) {
+            if (this.getChecklist()[i] == null) {
+                this.getChecklist()[i] = item;
+                return true;
+            }
+        }
+        return false;
     }
 
 
-    public void setUuid(String uuid){
-        this.uuid=uuid;
+    //Getters e Setters
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
     }
+
     public String getUuid() {
         return this.uuid;
     }
-    public void setNome(String nome){
-        this.nome=nome;
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
+
     public String getNome() {
         return this.nome;
     }
+
     public void setDescricao(String descricao) {
-        this.descricao=descricao;
+        this.descricao = descricao;
     }
+
     public String getDescricao() {
         return this.descricao;
 
-    }public void setCompleta(boolean completa) {
-        this.completa=completa;
     }
-    public boolean isCompleta(){
+
+    public void setCompleta(boolean completa) {
+        this.completa = completa;
+    }
+
+    public boolean isCompleta() {
         return this.completa;
     }
-    public void setOrdem(int ordem){
-        this.ordem=ordem;
+
+    public void setOrdem(int ordem) {
+        this.ordem = ordem;
     }
+
     public int getOrdem(int ordem) {
         return this.ordem;
     }
@@ -63,6 +98,6 @@ public class Tarefa {
     }
 }
 
-//qud for associação nao tem atributos em nenhumas das classes
+//quando for associação nao tem atributos em nenhumas das classes
 //herança usa extends
 //com
