@@ -44,7 +44,7 @@ public class MiniPizza extends Lanche {
         }
     }
 
-    //override re escreve um metodo em outra classe no casso a classe lanche
+    //override reescreve um metodo em outra classe no casso a classe lanche
 
 
     public void setBordarecheada(boolean bordarecheada) {

@@ -2,14 +2,13 @@ package objetos.item;
 
 import objetos.Item;
 
+import java.util.Locale;
+
 public class Estante {
     private int capMaxima;
     private Item[] itens;
 
-    //parametros passar valores de uma classe para outra
-    //Construtor constroi um objeto
-    //quando der um new estante, na mani vai fazer tudo o que tiver no construtor
-    //agregação ?
+
     public Estante(int capacidadeMaxima) {
         setCapMaxima(capacidadeMaxima);
         setItens(new Item[capMaxima]);
@@ -17,28 +16,46 @@ public class Estante {
     }
 
     public boolean estanteCheia() {
-        return quantidadeItens() == capMaxima;
+        return this.quantidadeItens() == this.getCapMaxima();
     }
 
     public int quantidadeItens() {
-        //todo
+     //quando eu sei que eu tenho que passar em todas as posições
+       int contador=0;
+        for(Item i : this.getItens() ){
+           if(i != null){
+               contador++;
+           }
+       }
         return 0;
     }
 
     public Item buscarItem(String titulo) {
-        //todo
+        for (Item i : this.getItens()){
+            if(i != null && i.getTitulo().toLowerCase().contains(titulo.toLowerCase())){
+            }
+        }
         return null;
     }
 
     public boolean adicionarItem(Item item) {
-        //todo
+       for (int i = 0; i< this.getItens().length; i++) {
+            if (this.getItens()[i] == null) {
+                this.getItens()[i] = item;
+                return true;
+            }
+       }
         return false;
     }
 
     public Item removerItem(int posicao) {
-        //todo
-        return null;
+        //armazena o item em uma variavel
+       Item i =this.getItens()[posicao];
+       //faz esse item virar nullo
+       this.getItens()[posicao]=null;
+       return i;
     }
+
 
     //GETTER & SETTER
     public int getCapMaxima() {
