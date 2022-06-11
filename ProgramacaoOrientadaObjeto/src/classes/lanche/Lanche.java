@@ -8,7 +8,7 @@ public abstract class Lanche {
     private double valor;
     private String tipo;
 
-    public String[] getIngredientes(){
+    public String[] getIngredientes() {
         return ingredientes;
     }
 
@@ -25,10 +25,12 @@ public abstract class Lanche {
         }
     }
 
+    public abstract void mostrarDetalhesdaComanda();
 
     public double getValor() {
         return valor;
     }
+
     public void setValor(double valor) {
         this.valor = valor;
     }

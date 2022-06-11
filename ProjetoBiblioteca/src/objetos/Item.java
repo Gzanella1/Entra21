@@ -49,7 +49,7 @@ public abstract class Item {
             }
 
         }
-    //retornando a medua
+    //retornando a media
         return soma/contador;
 
     }

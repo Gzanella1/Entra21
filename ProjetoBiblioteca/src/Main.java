@@ -7,67 +7,146 @@ import objetos.item.Estante;
 import java.util.Scanner;
 
 public class Main {
+    public static Scanner in = new Scanner(System.in);
+    static Estante e = new Estante(5);
+    static Item item = null;
+
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        Estante e = new Estante(5);
-        Item item = null;
+        while (true) {
+        System.out.println("Menu\n1 - Adicionar item \n2 - Buscar e tratar retorno \n   - avaliar\n   - ver avaliações \n3 - Remover \n4 - Mostrar itens da estante \n0 - Sair");
+        int escolha = in.nextInt();
 
-        for (int i = 0; i < 5; i++) {
-            System.out.println("Digite o " + (i + 1) + "º item da estante: ");
-            String itm = in.next();
-            if (itm.equalsIgnoreCase("livro")) {
-                item = new Livros();
-                Livros itemL = ((Livros) item);
-                System.out.print("Digite o autor do livro: ");
-                itemL.setAutor(in.next());
-                System.out.print("digite a quantidade de paginas: ");
-                itemL.setQtdPaginas(in.nextInt());
-                System.out.print("Digite o ano de publicação: ");
-                itemL.setAnoPublicacao(in.nextInt());
-                System.out.print("Digite a edição do livro: ");
-                itemL.setEdicao(in.nextInt());
 
-            } else if (itm.equalsIgnoreCase("dvd")) {
-                item = new DVD();
-                DVD dvd = ((DVD) item);
-                System.out.println("Digite o ano de lançamento: ");
-                dvd.setAnoLancamento(in.nextInt());
-                System.out.println("Digite o nome do diretor: ");
-                dvd.setDiretor(in.next());
-                System.out.println("Digite a duração do DVD: ");
-                dvd.setDuracao(in.nextDouble());
-            } else {
-                System.out.println("iten invalido!");
+            switch (escolha) {
+                case 1:
+                    addItem();
+                    break;
+                case 2:
+                    buscarItem();
+                    break;
+                case 3:
+                    removerItem();
+                    break;
+                case 4:
+                    mostrarItem();
+                    break;
+                case 0:
+                    sair();
+                    break;
             }
-            System.out.print("Digite o Titulo:");
-            item.setTitulo(in.next());
-            System.out.print("digite o genero: ");
-            item.setGenero(in.next());
-            System.out.print("Digite o valor :");
-            item.setValor(in.nextDouble());
-            e.adicionarItem(item);
         }
-        int cont = 1;
-        for (Item i : e.getItens()) {
-            System.out.println(i.getTitulo());
-            System.out.println(i.getGenero());
-            System.out.println(i.getValor());
+    }
 
-            if (i instanceof Livros) {
-                System.out.print(((Livros) i).getAutor());
-                System.out.print(((Livros) i).getQtdPaginas());
-                System.out.println(((Livros) i).getAnoPublicacao());
-                System.out.println(((Livros) i).getEdicao());
+    public static void addItem() {
+        for (int i = 0; i < 5; i++) {
+            while (true) {
+                System.out.print("Digite o " + (i + 1) + "º item da estante: ");
+                String itm = in.next();
+                if (itm.equalsIgnoreCase("livro")) {
+                    item = new Livros();
+                    Livros itemL = ((Livros) item);
+                    System.out.print("Digite o autor do livro: ");
+                    itemL.setAutor(in.next());
+                    System.out.print("digite a quantidade de paginas: ");
+                    itemL.setQtdPaginas(in.nextInt());
+                    System.out.print("Digite o ano de publicação: ");
+                    itemL.setAnoPublicacao(in.nextInt());
+                    System.out.print("Digite a edição do livro: ");
+                    itemL.setEdicao(in.nextInt());
+
+                } else if (itm.equalsIgnoreCase("dvd")) {
+                    item = new DVD();
+                    DVD dvd = ((DVD) item);
+                    System.out.print("Digite o ano de lançamento: ");
+                    dvd.setAnoLancamento(in.nextInt());
+                    System.out.print("Digite o nome do diretor: ");
+                    dvd.setDiretor(in.next());
+                    System.out.print("Digite a duração do DVD: ");
+                    dvd.setDuracao(in.nextDouble());
+                } else {
+                    System.out.println("iten invalido!");
+                    continue;
+                }
+                System.out.print("Digite o Titulo:");
+                item.setTitulo(in.next());
+                System.out.print("digite o genero: ");
+                item.setGenero(in.next());
+                System.out.print("Digite o valor :");
+                item.setValor(in.nextDouble());
+                e.adicionarItem(item);
                 System.out.println();
-            } else if (i instanceof DVD) {
-                System.out.println(((DVD) i).getAnoLancamento());
-                System.out.println(((DVD) i).getDiretor());
-                System.out.println(((DVD) i).getDuracao());
-                System.out.println();
+
+                if (!e.adicionarItem(item)) {
+                    System.err.println("Não foi possivel adicionar o item na estante!");
+                } else {
+                    System.out.println("item adicionado");
+                }
+                break;
             }
+        }
+    }
 
+    public static void buscarItem() {
+        System.out.println("informe o titulo da obra: ");
+        Item i = e.buscarItem(in.nextLine());
+        for (Item ite : e.getItens()) {
+            if (ite instanceof Livros) {
+                System.out.println("LIVRO");
+                System.out.println("Autor:" + ((Livros) ite).getAutor());
+                System.out.println("Número de paginas: " + ((Livros) ite).getQtdPaginas());
+                System.out.println("Ano de publicação: " + ((Livros) ite).getAnoPublicacao());
+                System.out.println("Edição do livro: " + ((Livros) ite).getEdicao());
+
+            } else if (ite instanceof DVD) {
+                System.out.println("DVD");
+                System.out.println("Ano lançamento: " + ((DVD) ite).getAnoLancamento());
+                System.out.println("Diretor: " + ((DVD) ite).getDiretor());
+                System.out.println("Duração do DVD: " + ((DVD) ite).getDuracao());
+            }
+            System.out.println("Titulo: " + ite.getTitulo());
+            System.out.println("Genero: " + ite.getGenero());
+            System.out.println("Valor: " + ite.getValor());
+            System.out.println();
+
+        }
+
+
+    }
+
+    public static void removerItem() {
+
+    }
+
+    public static void mostrarItem() {
+        //Mostra itens
+        int cont = 1;
+        for (Item ite : e.getItens()) {
+
+            if (ite instanceof Livros) {
+                System.out.println("LIVRO");
+                System.out.println("Autor:" + ((Livros) ite).getAutor());
+                System.out.println("Número de paginas: " + ((Livros) ite).getQtdPaginas());
+                System.out.println("Ano de publicação: " + ((Livros) ite).getAnoPublicacao());
+                System.out.println("Edição do livro: " + ((Livros) ite).getEdicao());
+
+
+            } else if (ite instanceof DVD) {
+                System.out.println("DVD");
+                System.out.println("Ano lançamento: " + ((DVD) ite).getAnoLancamento());
+                System.out.println("Diretor: " + ((DVD) ite).getDiretor());
+                System.out.println("Duração do DVD: " + ((DVD) ite).getDuracao());
+            }
+            System.out.println("Titulo: " + ite.getTitulo());
+            System.out.println("Genero: " + ite.getGenero());
+            System.out.println("Valor: " + ite.getValor());
+            System.out.println();
             cont++;
         }
+
+    }
+
+    public static void sair() {
+
     }
 }
 
@@ -94,3 +173,6 @@ public class Main {
 //flecha preta um prescisa do outro
 // flecha branca um pode existir sem o outro
 //flecha normal herança
+
+
+//interface
