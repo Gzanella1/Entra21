@@ -4,6 +4,7 @@ import objetos.Livros;
 import objetos.avaliacao.Avaliacao;
 import objetos.item.Estante;
 
+import javax.xml.transform.sax.SAXSource;
 import java.util.Scanner;
 
 public class Main {
@@ -13,9 +14,8 @@ public class Main {
 
     public static void main(String[] args) {
         while (true) {
-        System.out.println("Menu\n1 - Adicionar item \n2 - Buscar e tratar retorno \n   - avaliar\n   - ver avaliações \n3 - Remover \n4 - Mostrar itens da estante \n0 - Sair");
-        int escolha = in.nextInt();
-
+            System.out.println("Menu\n1 - Adicionar item \n2 - Buscar e tratar retorno \n   - avaliar\n   - ver avaliações \n3 - Remover \n4 - Mostrar itens da estante \n0 - Sair");
+            int escolha = in.nextInt();
 
             switch (escolha) {
                 case 1:
@@ -34,11 +34,14 @@ public class Main {
                     sair();
                     break;
             }
+            if (escolha == 0) {
+                break;
+            }
         }
     }
 
     public static void addItem() {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 2; i++) {
             while (true) {
                 System.out.print("Digite o " + (i + 1) + "º item da estante: ");
                 String itm = in.next();
@@ -63,6 +66,7 @@ public class Main {
                     dvd.setDiretor(in.next());
                     System.out.print("Digite a duração do DVD: ");
                     dvd.setDuracao(in.nextDouble());
+
                 } else {
                     System.out.println("iten invalido!");
                     continue;
@@ -78,8 +82,16 @@ public class Main {
 
                 if (!e.adicionarItem(item)) {
                     System.err.println("Não foi possivel adicionar o item na estante!");
+
+
                 } else {
-                    System.out.println("item adicionado");
+                    System.out.print("item adicionado!!!!\n");
+
+                    System.out.print("deseja voltar oa menu (s/n): ");
+                    String soun = in.next();
+                    if (soun.equalsIgnoreCase("n")) {
+                        break;
+                    }
                 }
                 break;
             }
@@ -87,30 +99,63 @@ public class Main {
     }
 
     public static void buscarItem() {
-        System.out.println("informe o titulo da obra: ");
-        Item i = e.buscarItem(in.nextLine());
-        for (Item ite : e.getItens()) {
-            if (ite instanceof Livros) {
-                System.out.println("LIVRO");
-                System.out.println("Autor:" + ((Livros) ite).getAutor());
-                System.out.println("Número de paginas: " + ((Livros) ite).getQtdPaginas());
-                System.out.println("Ano de publicação: " + ((Livros) ite).getAnoPublicacao());
-                System.out.println("Edição do livro: " + ((Livros) ite).getEdicao());
+        if (item == null) {
+            System.out.println("sem item na estante!!");
+        } else {
+            System.out.print("informe o titulo da obra: ");
+            Item i = e.buscarItem(in.nextLine());
+            if (item == null) {
+                System.out.println("esse item não existe na estante:");
+            } else {
+                while (true) {
+                    System.out.println("Menu\n1 - Avaliar \n2 - ver avaliaçãoes  \n  0 - voltar ao menu ");
+                    int escolha = in.nextInt();
 
-            } else if (ite instanceof DVD) {
-                System.out.println("DVD");
-                System.out.println("Ano lançamento: " + ((DVD) ite).getAnoLancamento());
-                System.out.println("Diretor: " + ((DVD) ite).getDiretor());
-                System.out.println("Duração do DVD: " + ((DVD) ite).getDuracao());
+                    if (escolha == 0) {
+                        break;
+                    }
+                    switch (escolha) {
+                        case 1:
+                            additem1(i);break;
+                        case 2:
+                            veravaliacoes(i);break;
+                        default:
+                            System.out.println("inssira uma oção valida: ");
+
+                    }
+                }
+
             }
-            System.out.println("Titulo: " + ite.getTitulo());
-            System.out.println("Genero: " + ite.getGenero());
-            System.out.println("Valor: " + ite.getValor());
-            System.out.println();
-
         }
+    }
 
+    public static void additem1(Item i) {
+        int cont = 0;
+        for (Avaliacao avaliacao : item.getAvaliacoes()) {
+            if (avaliacao != null) {
+                cont++;
+            }
+        }
+        if (cont == item.getAvaliacoes().length) {
+            System.out.println("O numero maximo de avaliações foi alcansado ");
+        } else {
+            item.avaliar();
+        }
+    }
 
+    public static void veravaliacoes(Item i) {
+        System.out.println();
+        System.out.println("Avaliaçãoes\n");
+        for (Avaliacao avaliacao : item.getAvaliacoes()) {
+            if (avaliacao != null) {
+                System.out.println(avaliacao.getNome()+": ");
+                System.out.println("avaliação: " + avaliacao.getRating());
+                System.out.println("feedback: " + avaliacao.getFeedback()+"\n");
+            }
+        }
+        System.out.println("---------------------");
+        System.out.println("classificação fonal: "+ item.getTotalRating());
+        System.out.println();
     }
 
     public static void removerItem() {
@@ -173,6 +218,5 @@ public class Main {
 //flecha preta um prescisa do outro
 // flecha branca um pode existir sem o outro
 //flecha normal herança
-
 
 //interface
