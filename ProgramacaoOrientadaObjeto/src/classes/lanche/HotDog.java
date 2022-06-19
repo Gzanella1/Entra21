@@ -1,16 +1,16 @@
 package classes.lanche;
 
-public class HotDog extends Sanduiche {
+public class HotDog extends Sanduiche{
 
     public HotDog() {
-        this.addIngredientes("Purê de batata");
-        this.addIngredientes("Salsicha");
-        this.addIngredientes("Batata Palha");
-        this.addIngredientes("Vinagrete");
-        this.addIngredientes("Queijo Cheedar");
-        this.addIngredientes("Milho");
-        this.addIngredientes("Ervilha");
+        this.adicionarIngrediente("Pão");
+        this.adicionarIngrediente("Salsicha");
+        this.adicionarIngrediente("Purê de batata");
+        this.adicionarIngrediente("Batata palha");
+        this.adicionarIngrediente("Vinagrete");
+        this.adicionarIngrediente("Queijo Cheddar");
+        this.adicionarIngrediente("Milho");
+        this.adicionarIngrediente("Ervilha");
         this.setTipo("Hot Dog");
     }
-
 }

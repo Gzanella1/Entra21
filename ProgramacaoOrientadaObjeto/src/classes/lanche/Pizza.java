@@ -1,6 +1,8 @@
 package classes.lanche;
 
-public class Pizza extends MiniPizza {
+import java.util.Scanner;
+
+public class Pizza extends MiniPizza{
     private String tamanho;
 
     public Pizza() {
@@ -11,8 +13,25 @@ public class Pizza extends MiniPizza {
         this.tamanho = tamanho;
     }
 
-    //get retorna
     public String getTamanho() {
         return this.tamanho;
+    }
+
+    @Override
+    public void mostrarDetalhesComanda() {
+        super.mostrarDetalhesComanda();
+        System.out.println("Tamanho: " + this.getTamanho());
+    }
+
+    @Override
+    public void montarDetalhesLanche(Scanner in) {
+        super.montarDetalhesLanche(in);
+        System.out.println("Informe o tamanho da pizza: ");
+        System.out.println("XS - broto");
+        System.out.println("SM - pequena");
+        System.out.println("MD - média");
+        System.out.println("LG - grande");
+        System.out.println("XL - família");
+        this.setTamanho(in.nextLine().toUpperCase());
     }
 }

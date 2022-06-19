@@ -1,32 +1,48 @@
 package classes.lanche;
 
-public abstract class Sanduiche extends Lanche {
-    //+adicionais:String[]
-    private String[] adicionais = new String[10];
+import java.util.ArrayList;
+import java.util.Scanner;
 
-    //metodo
-    public void adicionarAdicionais(String adicional) {
+public abstract class Sanduiche extends Lanche{
 
-        for (int i = 0; i < 10; i++) {
-            if (this.adicionais[i] == null) {
-                this.adicionais[i] = adicional;
-                break;
+    private ArrayList<String> adicionais = new ArrayList<>();
 
+    public void adicionarAdicional(String adicional) {
+        this.adicionais.add(adicional);
+    }
+
+    public ArrayList<String> getAdicionais() {
+        return adicionais;
+    }
+
+    @Override
+    public void mostrarDetalhesComanda() {
+        System.out.println("====" + this.getTipo() + "====");
+        if (!this.adicionais.isEmpty()) {
+            System.out.println("-ADICIONAIS-");
+            for (String adicional : this.getAdicionais()) {
+                System.out.println(adicional);
             }
         }
     }
 
-    public void setAdicionais(String[] adicionais) {
-        this.adicionais = adicionais;
-
-    }
-
-    public String[] getAdicionais() {
-        return this.adicionais;
+    @Override
+    public void montarDetalhesLanche(Scanner in) {
+        System.out.println("Deseja adicionais? (S/N)");
+        String adiconais = in.nextLine();
+        if (adiconais.equalsIgnoreCase("S")) {
+            for(int i = 0; i < 10; i++) {
+                System.out.print("Informe o adicional: ");
+                this.adicionarAdicional(in.nextLine());
+                System.out.println("Deseja adicionar mais adicionais? (S/N)");
+                String parada = in.nextLine();
+                if (parada.equalsIgnoreCase("N")) {
+                    break;
+                }
+            }
+        }
     }
 }
-
-
 //USE O SHIFT + ALT  E SELECIONA AS LINHAS QUE VOCE QUE DIGITAR AO MESMO TEMPO
 //CONTROL + CLICA EM CIMA DO QUE VOCE QUE PROCURAR
 
