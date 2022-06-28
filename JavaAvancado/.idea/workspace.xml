@@ -4,103 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c724095c-7af1-406a-bb95-4bf44029d70c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Aleatorio/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aleatorio/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aleatorio/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aleatorio/Aleatorio.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aleatorio/out/production/Aleatorio/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aleatorio/out/production/Aleatorio/Manutencao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aleatorio/out/production/Aleatorio/Veiculo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aleatorio/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aleatorio/src/Manutencao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aleatorio/src/Veiculo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/Exercicio Variaveis e IF else.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/Exercicio.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/out/production/Exercicio/Ecercicio15.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/out/production/Exercicio/Exercicio10.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/out/production/Exercicio/Exercicio11.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/out/production/Exercicio/Exercicio13.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/out/production/Exercicio/Exercicio14.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/out/production/Exercicio/Exercicio16.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/out/production/Exercicio/Exercicio17.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/out/production/Exercicio/Exercicio18.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/out/production/Exercicio/Exercicio19.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/out/production/Exercicio/Exercicio2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/out/production/Exercicio/Exercicio20.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/out/production/Exercicio/Exercicio21.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/out/production/Exercicio/Exercicio22.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/out/production/Exercicio/Exercicio3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/out/production/Exercicio/Exercicio4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/out/production/Exercicio/Exercicio5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/out/production/Exercicio/Exercicio6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/out/production/Exercicio/Exercicio7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/out/production/Exercicio/Exercicio9.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/out/production/Exercicio/Exercico12.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/out/production/Exercicio/Exercico8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/out/production/Exercicio/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/out/production/Exercicio/exercicio1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/src/Ecercicio15.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/src/Exercicio10.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/src/Exercicio11.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/src/Exercicio13.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/src/Exercicio14.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/src/Exercicio16.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/src/Exercicio17.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/src/Exercicio18.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/src/Exercicio19.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/src/Exercicio2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/src/Exercicio20.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/src/Exercicio21.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/src/Exercicio22.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/src/Exercicio3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/src/Exercicio4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/src/Exercicio5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/src/Exercicio6.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/src/Exercicio7.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/src/Exercicio9.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/src/Exercico12.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/src/Exercico8.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercicio Variaveis e IF else/src/exercicio1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exerciciosde Repeticao/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exerciciosde Repeticao/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exerciciosde Repeticao/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exerciciosde Repeticao/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exerciciosde Repeticao/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exerciciosde Repeticao/Exerciciosde Repeticao.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exerciciosde Repeticao/exerciciosdeRepeticao.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exerciciosde Repeticao/out/production/exerciciosdeRepeticao/AtividadeFor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exerciciosde Repeticao/out/production/exerciciosdeRepeticao/Desafio.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exerciciosde Repeticao/out/production/exerciciosdeRepeticao/Desafio2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exerciciosde Repeticao/out/production/exerciciosdeRepeticao/Desafio3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exerciciosde Repeticao/out/production/exerciciosdeRepeticao/Exercicio1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exerciciosde Repeticao/out/production/exerciciosdeRepeticao/Explicacao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exerciciosde Repeticao/out/production/exerciciosdeRepeticao/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exerciciosde Repeticao/out/production/exerciciosdeRepeticao/atv6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exerciciosde Repeticao/out/production/exerciciosdeRepeticao/ex5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exerciciosde Repeticao/src/Desafio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exerciciosde Repeticao/src/Desafio2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exerciciosde Repeticao/src/Desafio3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exerciciosde Repeticao/src/Exercicio1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exerciciosde Repeticao/src/Explicacao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exerciciosde Repeticao/src/FORatividade.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exerciciosde Repeticao/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exerciciosde Repeticao/src/atv6.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exerciciosde Repeticao/src/ex5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InterfaceYoutube/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InterfaceYoutube/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InterfaceYoutube/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InterfaceYoutube/InterfaceYoutube.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InterfaceYoutube/src/Lutador.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InterfaceYoutube/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Laços de Repetição/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProjetoBiblioteca/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ProjetoBiblioteca/.idea/misc.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2e35c208-0ab5-49a1-8248-69010f6f1e91" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,14 +17,10 @@
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2AaLBWJrN1ZUHoRTxn4aAy4H8OC" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2ArcQptauHlTkgYcDxwPFaQLWT8" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -129,12 +29,15 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Gzmaia/Documents/Entra21/JavaAvancado"
+    "last_opened_file_path": "C:/Users/Gzmaia/Documents/Entra21/POO_Exercicio",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+    <configuration name="MainHashMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainHashMap" />
       <module name="JavaAvancado" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -142,18 +45,18 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MainHashMap" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c724095c-7af1-406a-bb95-4bf44029d70c" name="Changes" comment="" />
-      <created>1655242616962</created>
+      <changelist id="2e35c208-0ab5-49a1-8248-69010f6f1e91" name="Changes" comment="" />
+      <created>1655771132318</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1655242616962</updated>
+      <updated>1655771132318</updated>
     </task>
     <servers />
   </component>

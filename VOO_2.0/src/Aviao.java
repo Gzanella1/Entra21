@@ -4,20 +4,20 @@ public class Aviao implements MeioTransporte {
     private ArrayList<AssentoAviao> listaassentoAviao = new ArrayList<>();
 
     public Aviao(int linhascadeirasLuxo, int linhasCadeirasEconomica) {
-        String alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String alfabeto = "ABCDEF";
+        String cont = "ABCDEF";
 
         for (int i = 1; i < 4 * linhascadeirasLuxo; i++) {
-            AssentoAviao cluxo= new AssentoAviao();
-            cluxo.setCodigo(alfabeto.charAt(i)+String.valueOf(i));
-            listaassentoAviao.add(cluxo);
-        }
-        for (int i = 1; i < 6 * linhasCadeirasEconomica; i++) {
             AssentoAviao cluxo = new AssentoAviao();
-            cluxo.setCodigo(String.valueOf(i));
-
-            listaassentoAviao.add(cluxo);
+                if (i < 10) {
+                    cluxo.setCodigo(alfabeto.charAt(i - 1) + "0" + String.valueOf(i));
+                } else {
+                    cluxo.setCodigo(alfabeto.charAt(i - 1) + String.valueOf(i));
+                }
+                listaassentoAviao.add(cluxo);
+            }
         }
-    }
+
 
 
     @Override
@@ -44,10 +44,19 @@ public class Aviao implements MeioTransporte {
 
     @Override
     public void mostrarAsseentos() {
-        /*for (int i =0 ;i < ;i++){
+        for (int i = 1; i <= listaassentoAviao.size(); i++) {
+            if (listaassentoAviao.get(i - 1).isOcupado()) {
+                System.out.print("[XX]");
+            } else {
+                System.out.print("[" + listaassentoAviao.get(i - 1).getCodigo() + "]");
+            }
+            if (i % 4 == 0) {
+                System.out.println();
+            } else if (i % 2 == 0) {
+                System.out.print(" || ");
+            }
 
         }
-*/
     }
 
     @Override

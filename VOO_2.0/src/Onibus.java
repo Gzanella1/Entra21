@@ -7,7 +7,6 @@ public class Onibus implements MeioTransporte {
 
     public Onibus(int linhasCadeiras) {
         //como já sabemos quantos cadeiras cabem em uma linha
-
         for (int i = 1; i <= 4 * linhasCadeiras; i++) {
             //criar um objeto assento
             AssentoOnibus a = new AssentoOnibus();
@@ -47,17 +46,23 @@ public class Onibus implements MeioTransporte {
 
     @Override
     public void mostrarAsseentos() {
+        //ve se esta ocupado
         for (int i = 1; i <= listaassentoonibus.size(); i++) {
-           if(listaassentoonibus.get(i-1).isOcupado()){
-               System.out.print("[XX]");
-           }else if(i < 10) {
+            //verifica se esta ocupado
+            if (listaassentoonibus.get(i - 1).isOcupado()) {
+                System.out.print("[XX]");
+                //ve se é menor qeu 10
+            } else if (i < 10) {
                 System.out.print("[0" + listaassentoonibus.get(i - 1).getLugar() + "]");
-            }else {
+                //senao for normal
+            } else {
                 System.out.print("[" + listaassentoonibus.get(i - 1).getLugar() + "]");
             }
+            //ver se e divizivel por 4
             if (i % 4 == 0) {
                 System.out.println();
-            } else if (i %2==0 ) {
+                //se divisivel por 2
+            } else if (i %2 == 0) {
                 System.out.print(" || ");
             }
         }
