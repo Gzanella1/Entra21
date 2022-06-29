@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -5,7 +7,7 @@ public class Main {
        // o.mostrarAsseentos();
 
 
-        Aviao a=new Aviao(4,4);
+        Aviao a=new Aviao(4,6);
         a.mostrarAsseentos();
     }
 }

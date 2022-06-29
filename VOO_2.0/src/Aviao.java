@@ -3,22 +3,39 @@ import java.util.ArrayList;
 public class Aviao implements MeioTransporte {
     private ArrayList<AssentoAviao> listaassentoAviao = new ArrayList<>();
 
-    public Aviao(int linhascadeirasLuxo, int linhasCadeirasEconomica) {
-        String alfabeto = "ABCDEF";
-        String cont = "ABCDEF";
-
-        for (int i = 1; i < 4 * linhascadeirasLuxo; i++) {
-            AssentoAviao cluxo = new AssentoAviao();
-                if (i < 10) {
-                    cluxo.setCodigo(alfabeto.charAt(i - 1) + "0" + String.valueOf(i));
-                } else {
-                    cluxo.setCodigo(alfabeto.charAt(i - 1) + String.valueOf(i));
-                }
-                listaassentoAviao.add(cluxo);
+    public Aviao(int linhasCadeirasLuxo, int linhasCadeirasEconomicas) {
+        String codigoAssentos = "ABCD";
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < linhasCadeirasLuxo; j++) {
+                AssentoAviao a = new AssentoAviao();
+                a.setCodigo(String.valueOf(codigoAssentos.charAt(i))+j);
+                a.setClasse(ClasseAssentoVoo.LUXO);
+                listaassentoAviao.add(a);
             }
         }
+        codigoAssentos = "ABCDEF";
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < linhasCadeirasEconomicas; j++) {
+                AssentoAviao a = new AssentoAviao();
+                a.setCodigo(String.valueOf(codigoAssentos.charAt(i))+j);
+                a.setClasse(ClasseAssentoVoo.ECONOMICA);
+                listaassentoAviao.add(a);
+            }
+        }
+    }
+/*
 
-
+                a.setClasse(ClasseAssentoVoo.LUXO);
+                assentos.add(a);
+            }
+        }
+        codigoAssentos = "ABCDEF";
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < linhasCadeirasEconomicas; j++) {
+                AssentoVoo a = new AssentoVoo();
+                a.setCodigo(String.valueOf(codigoAssentos.charAt(i))+j);
+                a.setClasse(ClasseAssentoVoo.ECONOMICA);
+                assentos.add(a);*/
 
     @Override
     public boolean verificaOcupacao(String assento) {
@@ -70,9 +87,9 @@ public class Aviao implements MeioTransporte {
         return null;
     }
 
-    public Assento getAssento(String assento, String classe) {
+    public Assento getAssento(String assento, ClasseAssentoVoo classe) {
         for (AssentoAviao assentoAviao : this.listaassentoAviao) {
-            if (assentoAviao.getCodigo().equalsIgnoreCase(assento) && assentoAviao.getClasse().equalsIgnoreCase(classe)) {
+            if (assentoAviao.getCodigo().equalsIgnoreCase(assento) && assentoAviao.getClasse().equals(classe)) {
                 return assentoAviao;
             }
         }
