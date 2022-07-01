@@ -2,17 +2,15 @@ package objetos.item;
 
 import objetos.Item;
 
+import java.util.ArrayList;
 import java.util.Locale;
 
 public class Estante {
     private int capMaxima;
-    private Item[] itens;
+    private ArrayList<Item> itens = new ArrayList<>();
 
-
-    public Estante(int capacidadeMaxima) {
-        setCapMaxima(capacidadeMaxima);
-        setItens(new Item[capMaxima]);
-
+    public Estante(int capMaxima) {
+        setCapMaxima(capMaxima);
     }
 
     public boolean estanteCheia() {
@@ -20,44 +18,23 @@ public class Estante {
     }
 
     public int quantidadeItens() {
-     //quando eu sei que eu tenho que passar em todas as posições
-       int contador=0;
-        for(Item i : this.getItens() ){
-           if(i != null){
-               contador++;
-           }
-       }
-        return 0;
+        return this.itens.size();
     }
 
     public Item buscarItem(String titulo) {
-        for (Item i : this.getItens()){
-            if(i != null && i.getTitulo().toLowerCase().contains(titulo.toLowerCase())){
-            }
-        }
-        return null;
+        //lista item transforma e string filtrando tudo onde o i
+        return this.itens.stream().filter(i -> i.getTitulo().equalsIgnoreCase(titulo))
+                .findFirst().orElse(null);
     }
 
+
     public boolean adicionarItem(Item item) {
-       for (int i = 0; i< this.getItens().length; i++) {
-            if (this.getItens()[i] == null) {
-                this.getItens()[i] = item;
-                return true;
-            }
-       }
+        if (!estanteCheia()) {
+            return this.itens.add(item);
+        }
         return false;
     }
 
-    public Item removerItem(int posicao) {
-        //armazena o item em uma variavel
-       Item i =this.getItens()[posicao];
-       //faz esse item virar nullo
-       this.getItens()[posicao]=null;
-       return i;
-    }
-
-
-    //GETTER & SETTER
     public int getCapMaxima() {
         return capMaxima;
     }
@@ -66,11 +43,18 @@ public class Estante {
         this.capMaxima = capMaxima;
     }
 
-    public Item[] getItens() {
+    public ArrayList<Item> getItens() {
         return itens;
     }
 
-    public void setItens(Item[] itens) {
+    public void setItens(ArrayList<Item> itens) {
         this.itens = itens;
+    }
+
+    public Item removerItem(int posicao) {
+        return this.itens.remove(posicao);
+
+    //GETTER & SETTER
+
     }
 }

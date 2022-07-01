@@ -1,23 +1,14 @@
+package carta;
+
 public class Carta {
-private Nipe nipe;
+private Naipe nipe;
 private ValorCarta valorCarta;
 
-
-
-
-
-
-
-
-
-
-
-
-    public Nipe getNipe() {
+    public Naipe getNipe() {
         return nipe;
     }
 
-    public void setNipe(Nipe nipe) {
+    public void setNipe(Naipe nipe) {
         this.nipe = nipe;
     }
 
