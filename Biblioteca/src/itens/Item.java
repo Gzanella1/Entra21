@@ -1,6 +1,6 @@
-package objetos;
+package itens;
 
-import objetos.avaliacao.Avaliacao;
+import avaliacao.Avaliacao;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -23,15 +23,17 @@ public abstract class Item {
         a.setFeedback(in.nextLine());
         this.avaliacoes.add(a);
     }
-//total de avaliações
+
     public double getTotalRating() {
-        //retorna a lista de avaliação convertendo tudo em
-        //depois converte para double  somando tudo e dividindo pelo total de avaliação
-        return this.avaliacoes.stream().mapToDouble(Avaliacao::getRating).sum()
+        Double valor = this.avaliacoes.stream().mapToDouble(Avaliacao::getRating).sum()
                 /this.avaliacoes.size();
+        return valor.isNaN() ? 0 : valor;
     }
 
-    //GETTES E SETTER
+    public abstract void montarDetalhes(Scanner in);
+    public abstract void mostrarDetalhes();
+
+    // GETTERS & SETTERS
 
     public String getTitulo() {
         return titulo;
@@ -57,11 +59,11 @@ public abstract class Item {
         this.valor = valor;
     }
 
-    public ArrayList<Avaliacao> getAvaliacaos() {
-        return avaliacaos;
+    public ArrayList<Avaliacao> getAvaliacoes() {
+        return avaliacoes;
     }
 
-    public void setAvaliacaos(ArrayList<Avaliacao> avaliacaos) {
-        this.avaliacaos = avaliacaos;
+    public void setAvaliacoes(ArrayList<Avaliacao> avaliacoes) {
+        this.avaliacoes = avaliacoes;
     }
 }

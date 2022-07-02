@@ -1,9 +1,8 @@
-package objetos.item;
+package estantes;
 
-import objetos.Item;
+import itens.Item;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class Estante {
     private int capMaxima;
@@ -22,7 +21,6 @@ public class Estante {
     }
 
     public Item buscarItem(String titulo) {
-        //lista item transforma e string filtrando tudo onde o i
         return this.itens.stream().filter(i -> i.getTitulo().equalsIgnoreCase(titulo))
                 .findFirst().orElse(null);
     }
@@ -34,6 +32,12 @@ public class Estante {
         }
         return false;
     }
+
+    public Item removerItem(int posicao) {
+        return this.itens.remove(posicao);
+    }
+
+    // GETTERS & SETTERS
 
     public int getCapMaxima() {
         return capMaxima;
@@ -49,12 +53,5 @@ public class Estante {
 
     public void setItens(ArrayList<Item> itens) {
         this.itens = itens;
-    }
-
-    public Item removerItem(int posicao) {
-        return this.itens.remove(posicao);
-
-    //GETTER & SETTER
-
     }
 }

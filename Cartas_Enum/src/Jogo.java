@@ -12,8 +12,6 @@ public class Jogo {
 
 
     public void firstRound(){
-
-
     }
     public void handlePlayerOption(PlayerOption){
 

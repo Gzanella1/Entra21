@@ -1,12 +1,11 @@
-package objetos.avaliacao;
+package avaliacao;
 
 public class Avaliacao {
+    private double rating;
+    private String nome;
+    private String feedback;
 
-    public double rating;
-    public String nome;
-    public String  feedback;
-
-    //GETTER E SETTER
+    // GETTERS & SETTERS
 
     public double getRating() {
         return rating;
