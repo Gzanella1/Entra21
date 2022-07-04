@@ -1,4 +1,5 @@
 import estantes.Estante;
+import estantes.Loja;
 import itens.DVD;
 import itens.Item;
 import itens.Livro;
@@ -59,9 +60,16 @@ public class Main {
 
     // Adicionar item na estante
     public static void adicionarItem(Estante e) {
+        Loja l= new Loja();
+        System.out.println("digite em que estante você deseja adicionar o item : ");
+        if(in.nextLine().equalsIgnoreCase()){
+
+        }
         if (e.estanteCheia()) {
             System.err.println("Sua estante está cheia! Não é possível adicionar mais itens!");
         } else {
+            System.out.println("informe a estante que esta o item: ");
+
             Item i = null;
             int escolha = -1;
             while (escolha < 0 || escolha > 1) {
