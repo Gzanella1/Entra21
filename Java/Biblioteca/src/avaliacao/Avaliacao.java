@@ -10,8 +10,6 @@ public class Avaliacao {
     LocalDateTime dataAvaliacao= LocalDateTime.now();
 
 
-
-
     // GETTERS & SETTERS
 
     public double getRating() {
@@ -37,6 +35,8 @@ public class Avaliacao {
     public void setFeedback(String feedback) {
         this.feedback = feedback;
     }
+
+
 
     public LocalDateTime getDataAvaliacao() {
         return dataAvaliacao;
