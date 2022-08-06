@@ -1,6 +1,6 @@
 package itens;
 
-import avaliacao.Avaliacao;
+import avalliacao.Avaliacao;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -25,7 +25,8 @@ public abstract class Item {
     }
 
     public double getTotalRating() {
-        Double valor = this.avaliacoes.stream().mapToDouble(Avaliacao::getRating).sum() / this.avaliacoes.size();
+        Double valor = this.avaliacoes.stream().mapToDouble(Avaliacao::getRating).sum()
+                /this.avaliacoes.size();
         return valor.isNaN() ? 0 : valor;
     }
 

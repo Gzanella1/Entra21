@@ -1,6 +1,6 @@
 package menus;
 
-public enum EMenuItem implements IMenu{
+public enum EMenuItem implements IMenu {
     VOLTAR(0, "Voltar"),
     AVALIAR_ITEM(1, "Avaliar item"),
     VER_AVALIACOES(2, "Ver avaliações"),
@@ -19,7 +19,7 @@ public enum EMenuItem implements IMenu{
                 return e;
             }
         }
-        return null;
+        throw new RuntimeException();
     }
     public int getValorOpcao() {
         return this.valorOpcao;

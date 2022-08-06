@@ -1,0 +1,97 @@
+body{/*corpo do nosso codigo*/
+background-color: lightblue;
+font-family: 'Roboto', sans-serif;
+box-sizing: border-box;
+text-align: center;
+}
+
+
+table{
+   /* border: 1px solid black;*/
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table.contained{
+margin: 0 15% ;
+width: 70%;
+}
+
+tr{
+    border-color: black;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+th{
+    text-align: start;
+    background-color: rgb(99, 137, 150);
+    padding: 8px 4;
+    color: black;
+}
+tfoot tr{
+    border-bottom: 0px;
+}
+tfoot tr.sum td {
+    text-align: right;
+}
+small{
+    color:black;
+    font-size: 12px;
+}
+
+*{font-family: 'Poppins';}
+
+
+.w-50{
+    width: 50;
+}
+.w-40{
+    width: 40;
+}
+
+.edit-cell a {
+    text-decoration:none;
+    background-color:cadetblue;
+    padding: 4px 8px;
+    display:inline-block; 
+    margin: 2px 0;
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+   
+}
+.edit a {
+    text-decoration:none;
+    background-color:cadetblue;
+    padding: 4px 8px;
+    display:inline-block; 
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+.edit a:hover{
+    background-color:darkcyan;
+}
+
+.edit-cell a:hover{
+    background-color:darkcyan;
+}
+    
+
+
+
+
+
+/*Style id classe  elemento geral=* */
+
+/* p{Paragrafo
+    color: aqua;
+    margin-top:0;
+
+}
+#par-gr{para id
+    color: green;
+}
+
+.white-tex{para classes
+color:red;
+} */
