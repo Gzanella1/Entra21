@@ -1,0 +1,13 @@
+html, body{
+  margin: 0;
+  height: 100%; 
+  background-color: rgb(248,249,250); 
+}
+.bg-teal{
+  background-color:	#20B2AA!important;
+}
+div.footer{
+  background-color:	#20B2AA;
+  padding: 24px;
+
+}

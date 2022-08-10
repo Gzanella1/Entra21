@@ -1,10 +1,10 @@
-body{/*corpo do nosso codigo*/
-background-color: lightblue;
-font-family: 'Roboto', sans-serif;
-box-sizing: border-box;
-text-align: center;
-}
+html,  body{/*corpo do nosso codigo*/
+    background-color: lightblue;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    text-align: center;
 
+}
 
 table{
    /* border: 1px solid black;*/
@@ -13,27 +13,32 @@ table{
     border-collapse: collapse;
 }
 
-table.contained{
-margin: 0 15% ;
-width: 70%;
+table.contained {
+    margin: 0 15% ;
+    width: 70%;
 }
 
 tr{
     border-color: black;
     border-bottom: 1px solid rgb(0, 0, 0);
 }
+
 th{
     text-align: start;
     background-color: rgb(99, 137, 150);
     padding: 8px 4;
     color: black;
 }
+
+
 tfoot tr{
     border-bottom: 0px;
 }
+
 tfoot tr.sum td {
     text-align: right;
 }
+
 small{
     color:black;
     font-size: 12px;
@@ -45,6 +50,7 @@ small{
 .w-50{
     width: 50;
 }
+
 .w-40{
     width: 40;
 }
@@ -67,15 +73,84 @@ small{
     border-radius: 4px;
     color: rgb(255, 255, 255);
     text-align: center;
+    margin: 10px;
 }
 .edit a:hover{
     background-color:darkcyan;
+    padding: 4px 8px;
 }
 
 .edit-cell a:hover{
     background-color:darkcyan;
 }
-    
+
+div.container {
+    text-align: center;
+}
+
+#img{
+    border: 10px solid black;
+}
+
+#titulos{
+    background-color:rgb(99, 137, 150);
+    margin: 15px auto;
+    display: block;
+    padding: 24px;
+    border-radius: 4px;
+    text-align: center;
+    width: 50%;
+}
+#divti{
+   text-align: center;
+}
+
+
+ #form{
+    width: 50%;
+    height: 50% ;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: white;
+ }
+
+#fd{
+    text-align: left;
+    background-color: rgb(255, 240, 252);
+    margin: 10px;
+    padding: 10px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    div.container{
+        margin: 0 48px;
+    }
+    div.container a{
+        display: block;
+        padding: 10px 10px;
+    }
+}
+
+
+
+
+
+
+
 
 
 
