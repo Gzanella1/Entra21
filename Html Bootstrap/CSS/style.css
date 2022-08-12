@@ -9,5 +9,21 @@ html, body{
 div.footer{
   background-color:	#20B2AA;
   padding: 24px;
-
+}
+#parteCima{
+    width: 100%;
+    height: 100% ;
+    padding: 50px;
+    display: inline-block;
+    border: 1px solid rgb(255, 255, 255);
+    box-sizing: border-box;
+    background-color: #20B2AA;
+}
+div.log{
+  text-align: left;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 20px 15px;
+  margin-left: 35%;
+  margin-right: 35%;
+  
 }
