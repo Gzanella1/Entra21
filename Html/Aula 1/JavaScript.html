@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/Javascript">
+        function submitMasg(){
+            let msg= document.getElementById("input-txt").value;
+            document.getElementById("input-txt").value="";//limpando
+
+            let p=document.createElement("p");//criar uma tag,
+            p.textContent =msg;//passou o que o usu digitou
+            document.getElementById("texto").appendChild(p);//jogou na lista child e imprima
+        }
+
+        //nomeada
+        //anonimas
+        //fução de seta =>
+        //auto invocaveis
+
+
+        document.onreadystatechange =  () =>  { //no lugar da => poderia ser uma function
+            if(document.readyState === 'complete'){
+                document.getElementById("input-txt")
+                    .addEventListener("keydown", function(e) {
+                         if(e.key ===  "Enter" || e.keyValue === 13){
+                            submitMasg() ;
+            }   
+        }
+        );
+            }
+        }
+
+
+
+
+
+    </script>
+    </head>
+
+    <body>
+       <div id="texto"></div>
+       <input type="text" name="teste" id="input-txt" >
+       <button onclick="submitMasg()">enviar</button>
+
+    </body>
+</html>
