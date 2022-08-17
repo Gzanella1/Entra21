@@ -9,17 +9,124 @@
 
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
-	</head>
+	<script type="text/Javascript">
+       // uma lista de lanches
+        var Lanches=[];
+        var id_seq=1;
+        function onAdd(){
+            let nome= prompt ("informe o nome do lanche:");
+            let valor= prompt(`informe o valor do lanche ${nome}` );
+            let lanche={
+                "id": id_seq,
+                "nome": nome,
+                "valor":Number(valor)
+            };
+                Lanches.push(lanche);
+                id_seq++;
+                tableLoad();
+        }
+
+        function tableLoad() {
+            let tableBody = document.getElementById("tabela").getElementsByTagName("tbody")[0];
+            tableBody.innerHTML =Lanches.map((lanche) => { // o map tranforam a lista em string
+                return `
+                <tr>
+                    <td class = "w-40" id = "lanche-${lanche.id}-nome">${lanche.nome}</td>
+                    <td class = "w-40" id = "lanche-${lanche.id}-valor">${lanche.valor}</td>
+                    <td class = "edit-cell" id = "lanche-${lanche.id}-crud">
+                        <button class = "btn btn-warning" onClick = "onAlter(${lanche.id})">Alterar</button> 
+                        <button class = "btn btn-danger" onClick = "onExclude(${lanche.id})">Excluir</button>   
+                    </td>
+                    <td class = "edit-cell" style = "display: none;" id = "lanche-${lanche.id}-save">
+                        <button class = "btn salvar" onClick = "onSave(${lanche.id})">Salvar</button> 
+                        <button class = "btn btn-danger" onClick = "onCancel(${lanche.id})">Cancelar</button>   
+                    </td>
+                </tr>`;     
+             }).join("");                                     //junta tudo, no caso ele vai juntar toda a lista
+        }
+
+        function onCancel(id) {
+            let lanche=Lanches.find(lanche => lanche.id === id);
+            document.getElementById(`lanche-${lanche.id}-nome`).innerHTML =`${lanche.nome}`;
+            document.getElementById(`lanche-${lanche.id}-valor`).innerHTML =`${lanche.valor}`;
+            document.getElementById(`lanche-${lanche.id}-crud`).style="";
+            document.getElementById(`lanche-${lanche.id}-save`).style="display: none";
+        }
+
+        function onSave(id) {
+            let lanche=Lanches.find(lanche => lanche.id === id);
+            lanche.nome = document.getElementById(`input-lanche-${lanche.id}-nome`).value;
+            document.getElementById(`lanche-${lanche.id}-nome`).innerHTML =`${lanche.nome}`;
+            lanche.valor = document.getElementById(`input-lanche-${lanche.id}-valor`).value;
+            document.getElementById(`lanche-${lanche.id}-valor`).innerHTML =`${lanche.valor}`;
+
+            document.getElementById(`lanche-${lanche.id}-crud`).style="";
+            document.getElementById(`lanche-${lanche.id}-save`).style="display: none";
+        }
+
+        function onAlter(id) {
+            let lanche=Lanches.find(lanche => lanche.id === id); 
+            document.getElementById(`lanche-${lanche.id}-nome`).innerHTML =`
+               <input type="text" id="input-lanche-${lanche.id}-nome" value="${lanche.nome}" />`; 
+               
+               document.getElementById(`lanche-${lanche.id}-valor`).innerHTML =`
+               <input type="number" id="input-lanche-${lanche.id}-valor" value="${lanche.valor}" />`; 
+                  
+               document.getElementById(`lanche-${lanche.id}-crud`).style="display: none";
+               document.getElementById(`lanche-${lanche.id}-save`).style="";
+        }
+
+        /*     let lanche=Lanches.find(lanche => lanche.id === id);//FIND SIGNIFICA ENCONTRAR 
+            //let user = confirm("deseja realmente alterar valor do lanche?");
+            let v=prompt(`digite o novo valor do lanche ${lanche.id}:`);
+                if(v !== null){
+                    lanche.valor=Number(v);
+                    tableLoad();
+                }*/
+                
+        function onDelet(id) {
+            let lanche=Lanches.find(lanche => lanche.id === id);
+            let user = confirm("deseja realmente excluir o lanche?");
+                if(user){
+                   Lanches = Lanches.filter(lanche => lanche.id !== id);
+                   tableLoad();
+            }
+        }
+
+
+    </script>
+    </head>
     <body> 
         <div id="tabelas">
-            <table class="contained">
-                <caption><h3>Month Savings</h3></caption>
-                <tread><!--Para expecificar ainda mais que é um cabeçalho-->
+            <table class="contained" id="tabela">
+                <caption><h3>Itens A vendas</h3></caption>
+                <thead><!--Para expecificar ainda mais que é um cabeçalho-->
                     <tr>
-                       <th class="w-50">Month</th><!-- o <th> é para o cabeçalho-->
-                        <th colspan="2">Savings</th>
+                       <th class="w-50">Lanches</th><!-- o <th> é para o cabeçalho-->
+                        <th colspan="2">Valor </th>
                     </tr><!--o <tr> especifica somente uma linha-->
-                </tread>
+                </thead>
+                <tbody>
+                </tbody>
+                <tfoot>
+                    <tr class="sum">
+                    <td colspan="3">
+                    <button class="btn btn-success" onclick="onAdd()">Adicionar</button>
+                    </tr>
+                </tfoot>
+            </table>
+        </div> 
+    <body>
+</html>
+
+
+<!-- Objetos em javaScript -->
+<!--  -->
+
+<!-- o var  continua na memora o let não -->
+
+
+ <!--   </tread>
                 <tbody>
                     <tr>
                         <td class="w-50">Janeiro</td>
@@ -30,14 +137,4 @@
                         <td class="w-50"> fevereiro</td>
                         <td class="w-40">$80</td>
                         <td class="edit-cell"><a href="teste.html">view</a></td>
-                    </tr>    
-                </tbody>
-                <tfoot>
-                    <tr class="sum">
-                        <td colspan="3"><small>Soma:$100</soma></td>
-                    </tr>
-                </tfoot>
-            </table>
-        </div> 
-    <body>
-</html>
+                    </tr> --> 

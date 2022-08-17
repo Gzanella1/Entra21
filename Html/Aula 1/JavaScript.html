@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script type="text/Javascript">
+
         function submitMasg(){
             let msg= document.getElementById("input-txt").value;
             document.getElementById("input-txt").value="";//limpando
@@ -28,14 +29,9 @@
                          if(e.key ===  "Enter" || e.keyValue === 13){
                             submitMasg() ;
             }   
-        }
-        );
+        });
             }
         }
-
-
-
-
 
     </script>
     </head>
@@ -44,6 +40,21 @@
        <div id="texto"></div>
        <input type="text" name="teste" id="input-txt" >
        <button onclick="submitMasg()">enviar</button>
+
+
+
+
+
+
+
+
+       
+
+
+
+
+
+
 
     </body>
 </html>
