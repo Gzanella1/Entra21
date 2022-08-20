@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
     <script type="text/Javascript">
 
         function submitMasg(){
@@ -25,7 +26,7 @@
         document.onreadystatechange =  () =>  { //no lugar da => poderia ser uma function
             if(document.readyState === 'complete'){
                 document.getElementById("input-txt")
-                    .addEventListener("keydown", function(e) {
+                    .addEventListener("keydown", function(e) { 
                          if(e.key ===  "Enter" || e.keyValue === 13){
                             submitMasg() ;
             }   
@@ -33,23 +34,36 @@
             }
         }
 
+    function getMsg() {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve("eu amo js")
+            }, 1000);
+        })
+    }
+
+
+    async function asyncMsg() {
+            document.getElementById("async")
+            .innerHTML= await getMsg();
+            document.getElementById("async_btn").style= "display:none";
+    }/*await= esperar*/
+
+
+
     </script>
     </head>
 
     <body>
        <div id="texto"></div>
        <input type="text" name="teste" id="input-txt" >
-       <button onclick="submitMasg()">enviar</button>
-
-
-
-
-
-
-
-
+   
+        <button onclick="submitMasg()">enviar</button>
+        <div id="async"></div>
+         <button  id="async_btn"  onclick="asyncMsg()">Mensagem</button>
+ 
+        
        
-
 
 
 

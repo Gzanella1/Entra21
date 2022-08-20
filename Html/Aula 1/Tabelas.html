@@ -16,6 +16,7 @@
         function onAdd(){
             let nome= prompt ("informe o nome do lanche:");
             let valor= prompt(`informe o valor do lanche ${nome}` );
+          //objeto
             let lanche={
                 "id": id_seq,
                 "nome": nome,
@@ -30,19 +31,22 @@
             let tableBody = document.getElementById("tabela").getElementsByTagName("tbody")[0];
             tableBody.innerHTML =Lanches.map((lanche) => { // o map tranforam a lista em string
                 return `
-                <tr>
-                    <td class = "w-40" id = "lanche-${lanche.id}-nome">${lanche.nome}</td>
-                    <td class = "w-40" id = "lanche-${lanche.id}-valor">${lanche.valor}</td>
+                <tr> <!--linha-->
+                    <td class = "w-40" id = "lanche-${lanche.id}-nome">   ${lanche.nome}   </td><!--td dados da tabela-->
+                    <td class = "w-40" id = "lanche-${lanche.id}-valor"> ${lanche.valor} </td>
+
                     <td class = "edit-cell" id = "lanche-${lanche.id}-crud">
                         <button class = "btn btn-warning" onClick = "onAlter(${lanche.id})">Alterar</button> 
-                        <button class = "btn btn-danger" onClick = "onExclude(${lanche.id})">Excluir</button>   
+                        <button class = "btn btn-danger" onClick = "onDelet(${lanche.id})">Excluir</button>   
                     </td>
+
                     <td class = "edit-cell" style = "display: none;" id = "lanche-${lanche.id}-save">
                         <button class = "btn salvar" onClick = "onSave(${lanche.id})">Salvar</button> 
                         <button class = "btn btn-danger" onClick = "onCancel(${lanche.id})">Cancelar</button>   
-                    </td>
+                    </td> 
                 </tr>`;     
-             }).join("");                                     //junta tudo, no caso ele vai juntar toda a lista
+             }).join("");   //junta tudo, no caso ele vai juntar toda a lista
+             //display none -> esconde do usuário o conteúdo
         }
 
         function onCancel(id) {
@@ -50,13 +54,14 @@
             document.getElementById(`lanche-${lanche.id}-nome`).innerHTML =`${lanche.nome}`;
             document.getElementById(`lanche-${lanche.id}-valor`).innerHTML =`${lanche.valor}`;
             document.getElementById(`lanche-${lanche.id}-crud`).style="";
-            document.getElementById(`lanche-${lanche.id}-save`).style="display: none";
+            document.getElementById(`lanche-${lanche.id}-save`).style="display: none;";
         }
 
         function onSave(id) {
             let lanche=Lanches.find(lanche => lanche.id === id);
             lanche.nome = document.getElementById(`input-lanche-${lanche.id}-nome`).value;
             document.getElementById(`lanche-${lanche.id}-nome`).innerHTML =`${lanche.nome}`;
+            
             lanche.valor = document.getElementById(`input-lanche-${lanche.id}-valor`).value;
             document.getElementById(`lanche-${lanche.id}-valor`).innerHTML =`${lanche.valor}`;
 
@@ -72,12 +77,12 @@
                document.getElementById(`lanche-${lanche.id}-valor`).innerHTML =`
                <input type="number" id="input-lanche-${lanche.id}-valor" value="${lanche.valor}" />`; 
                   
-               document.getElementById(`lanche-${lanche.id}-crud`).style="display: none";
+               document.getElementById(`lanche-${lanche.id}-crud`).style="display: none;";
                document.getElementById(`lanche-${lanche.id}-save`).style="";
         }
 
-        /*     let lanche=Lanches.find(lanche => lanche.id === id);//FIND SIGNIFICA ENCONTRAR 
-            //let user = confirm("deseja realmente alterar valor do lanche?");
+        /*     let lanche=Lanches.find(lanche => lanche.id === id);                 //FIND SIGNIFICA ENCONTRAR 
+            //let user = confirm("deseja realmente alterar valor do lanche?");      //innerHTML -> serve para alterar o conteúdo html dentro do elemento selecionado
             let v=prompt(`digite o novo valor do lanche ${lanche.id}:`);
                 if(v !== null){
                     lanche.valor=Number(v);
@@ -121,9 +126,8 @@
 
 
 <!-- Objetos em javaScript -->
-<!--  -->
-
-<!-- o var  continua na memora o let não -->
+<!-- js tipajem fraca -->
+<!-- o var nao libera na memoria e  let libera  -->
 
 
  <!--   </tread>
@@ -138,3 +142,15 @@
                         <td class="w-40">$80</td>
                         <td class="edit-cell"><a href="teste.html">view</a></td>
                     </tr> --> 
+
+
+                    <!--
+                    -funnção nomeada    ex: function onDelet(id) {}
+
+                    -função anonima  ela nao tem nome. filter finder tambem sao anonima
+                
+                    -Arrow Functions é (lanche => lanche.id === id);
+                           em vez de   function(){}
+                                        
+                    -função invocaveis                 
+                    -->

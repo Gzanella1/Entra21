@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function loadCharList(){
+            let req =new XMLHttpRequest();
+            req.open("GET","http://hp-api.'he'rokuapp.com/api/characters",false);
+            req.send(null);
+            document.getElementById("charlist").innerHTML=
+                JSON.parse(req.responseText).map(char => `
+                     <li>${char.name}</li>`
+                ).join("");
+        }
+    </script>
+</head>
+<body onload="loadCharList()">
+    <ul id="charlist"></ul>
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript">
+
+        function loadImg(){
+            let req= new XMLHttpRequest();
+            req.open("GET", "https://dog.ceo/api/breeds/image/random",false);
+            req.send(null);//send()= envia(algo) 
+            document.getElementsByTagName("img")[0].src=
+               JSON.parse(req.responseText).message;
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <img src/>
+    <button onclick="loadImg()">get dog</button>
+</body>
+</html> -->
