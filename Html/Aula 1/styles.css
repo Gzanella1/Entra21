@@ -179,8 +179,42 @@ div.container {
 .btn.salvar{
 background-color: rgb(0, 255, 255);
 }
+.btn.salvar:hover{
+    background-color: rgb(24, 56, 56);
+}
+.btn.salvar:active{
+    background-color: rgb(38, 255, 0);
+}
 
+#btn-imgcat{
+    font-size: 25px;
+    width:95px ;
+    height:55px;
+    margin: 70px auto;    
+    color: aliceblue;
+    background-color: rgb(16, 49, 49);
+    
+    border: 0.5px solid white;
+    border-radius: 5px;
 
+}
+#btn-imgcat:hover{
+    color: aliceblue;
+    background-color: rgb(57, 146, 119);
+}
+#btn-imgcat:active{
+    color: black;
+    background-color:rgb(37, 166, 136)
+}
+script#API{
+    display: flex;
+    height: 30px;
+    text-align: center;
+}
+
+#saidaIMG{
+    margin: 15px auto;
+}
 
 @media screen and (max-width: 600px) {
     div.container{

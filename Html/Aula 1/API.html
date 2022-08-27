@@ -1,4 +1,66 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" id="API">
+   function requestImg(text) {
+            let url = text == null || text == "" ?
+                "https://cataas.com/cat?json=true" :
+                `https://cataas.com/cat/says/${text}?json=true`;
+            let req = new XMLHttpRequest();
+            req.open("GET", url, true);
+            req.onload = () => {
+                let img = document.getElementsByTagName("img")[0];
+                img.src = "https://cataas.com" + JSON.parse(req.responseText).url;
+                console.log(req.responseText);
+                img.onload = () => {
+                    Array.from(document.getElementsByTagName("button")).forEach( (button) => button.disabled = false);
+                    img.style = "border: 3px dotted white; border-radius: 8px; width: 50%;  ";
+                }
+            }
+            Array.from(document.getElementsByTagName("button")).forEach( (button) => button.disabled = true);
+            req.send(null);
+        }
+
+        function loadImg() {
+            requestImg();
+        }
+
+        function loadImgWithTexT() {
+            let text = prompt("Digite o texto a ser inserido na imagem: ");
+            if(text != null){
+                requestImg(text);
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <img id="saidaIMG" src/>
+    <br>
+    <button id="btn-imgcat" onclick="loadImg()">get cat</button>
+    <br>
+    <button  onclick="loadImgWithText()">Get CAT with text </button>
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -24,34 +86,4 @@
 
 
 
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API</title>
-    <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript">
-
-        function loadImg(){
-            let req= new XMLHttpRequest();
-            req.open("GET", "https://dog.ceo/api/breeds/image/random",false);
-            req.send(null);//send()= envia(algo) 
-            document.getElementsByTagName("img")[0].src=
-               JSON.parse(req.responseText).message;
-        }
-
-
-
-    </script>
-</head>
-<body>
-    <img src/>
-    <button onclick="loadImg()">get dog</button>
-</body>
-</html> -->
+ -->
