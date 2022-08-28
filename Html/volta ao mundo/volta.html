@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volta</title>
+    <script>
+
+            var V=["venezuela"];
+            var O=["ottawa"];
+            var L=["luchemburgo"];
+            var T=["tailandia"];
+            var A=["africa"];
+            var  palavras=[V,O,L,T,A];
+            let index=0;
+            let erros=0;
+        
+            function jogar(){
+            let str=prompt("digite para qual lugar eu posso ir: "+index);
+            
+            // a array  palavra esta com o idex que a posição atual dela ou seja posição do index =0 ela 
+            // esta na palavra V  
+            if(str.toLowerCase().startsWith("v") && palavras[index]=== V||
+               str.toLowerCase().startsWith("o") && palavras[index]=== O||
+               str.toLowerCase().startsWith("l") && palavras[index]=== L||
+               str.toLowerCase().startsWith("t") && palavras[index]=== T||
+               str.toLowerCase().startsWith("a") && palavras[index]=== A){
+   
+                if(!palavras[index].includes(str)){
+                    palavras[index].push(str);
+                }
+                alert(`você poderá ir para ${str}`);
+                index+=1;
+                erros=0;
+           
+            }else {
+                erros+=1;
+                if (erros === 3){
+                    let ramdom = Math.floor(Math.random() * (palavras[index].length));
+                    alert(`Dica: você poderia ir para ${palavras[index][ramdom]}`);
+                    // RAMDOM =aleatorio
+                    index=0;
+                    erros=0;
+                }else{
+                    alert(`voce não podera  ir para  ${str}`);
+                }
+            }
+
+            if(index === 5){
+                index = 0;
+            }
+            console.log(palavras);
+        }
+        
+        
+    </script>
+</head>
+<body>
+    <h1>Volta ao mundo</h1>
+    <button onclick="jogar()">jogar</button>
+</body>
+</html>
