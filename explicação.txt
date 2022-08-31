@@ -1,0 +1,13 @@
+get busca registro (read)
+post cria registro (create)
+put função principal é a  atualização. se nao tiver um identificador ele cria()
+patch (?) só atualiza   DE PREFERENCIA USA O PUT
+delete  (DELETE)
+
+
+padrao mvc
+
+spring é isso: http://localhost:8080
+
+@RestController
+
