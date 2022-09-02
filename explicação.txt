@@ -10,4 +10,11 @@ padrao mvc
 spring é isso: http://localhost:8080
 
 @RestController
+,
 
+@entity Uma Entity (Entidade) é um objeto leve de domínio persistente 
+utilizado para representar uma tabela da base de dados, sendo que cada instância da entidade corresponde a uma linha da tabela.
+
+model 
+view  camada de processamento 
+control porta de entrada para nos conectarmos com as api
