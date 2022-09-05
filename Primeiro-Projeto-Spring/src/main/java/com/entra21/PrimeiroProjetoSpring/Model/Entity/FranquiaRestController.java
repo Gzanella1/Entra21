@@ -27,6 +27,7 @@ public class FranquiaRestController {
     public void addFranquia(@RequestBody FranquiaEntity entity){
         franquiaRepository.save(entity);
     }
+
     @GetMapping("/{id}")//busscando por parametro
     public ResponseEntity getFranquia(@PathVariable(name="id") long id ){    //  return franquiaRepository.findById(id).orElse(null);
         Optional<FranquiaEntity> franquia = franquiaRepository.findById(id);

@@ -1,3 +1,4 @@
+
 package com.entra21.PrimeiroProjetoSpring.View.Repository;
 
 import com.entra21.PrimeiroProjetoSpring.Model.Entity.FranquiaEntity;
