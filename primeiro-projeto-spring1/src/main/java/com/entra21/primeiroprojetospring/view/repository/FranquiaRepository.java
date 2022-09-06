@@ -1,6 +1,6 @@
-package com.entra21.PrimeiroProjetoSpring.View.Repository;
+package com.entra21.primeiroprojetospring.view.repository;
 
-import com.entra21.PrimeiroProjetoSpring.Model.Entity.FranquiaEntity;
+import com.entra21.primeiroprojetospring.model.entity.FranquiaEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

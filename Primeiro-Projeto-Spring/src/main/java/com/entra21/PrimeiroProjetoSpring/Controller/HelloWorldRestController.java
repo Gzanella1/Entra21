@@ -1,4 +1,4 @@
-package com.entra21.PrimeiroProjetoSpring;
+package com.entra21.PrimeiroProjetoSpring.Controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

@@ -5,8 +5,8 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Data //serve  para gerar getter e setter para todos os atributos
-@Entity //pra dizer que é um mapeamento do banco
 @Table(name= "franquia")//expecifica qual tabela usar
+@Entity
 public class FranquiaEntity {
 
     @Column(name="id") //expecifica qual coluna vamos usar
