@@ -1,7 +1,13 @@
 package com.entra21.primeiroprojetospring.controller;
 
+import com.entra21.primeiroprojetospring.model.dto.FranquiaDTO;
+import com.entra21.primeiroprojetospring.model.dto.FranquiaPayloadDTO;
+import com.entra21.primeiroprojetospring.model.dto.GeneroDTO;
+import com.entra21.primeiroprojetospring.model.dto.GeneroPayLoadDTO;
 import com.entra21.primeiroprojetospring.model.entity.GeneroEntity;
 import com.entra21.primeiroprojetospring.view.repository.GeneroRepository;
+import com.entra21.primeiroprojetospring.view.service.FranquiaService;
+import com.entra21.primeiroprojetospring.view.service.GeneroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,42 +20,30 @@ import java.util.Optional;
 public class GeneroRestController {
 
     @Autowired
-    private GeneroRepository generoRepository;
-    
+    private GeneroService generoService;
+
     @GetMapping
-    public List<GeneroEntity> getGeneros() {
-        return generoRepository.findAll();
+    public List<GeneroDTO> getFranquias() {
+        return generoService.getAll();
     }
 
     @PostMapping
-    public void addFranquia(@RequestBody GeneroEntity entity) {
-        generoRepository.save(entity);
+    public void addGenero (@RequestBody GeneroPayLoadDTO newGenero) {
+        generoService.save(newGenero);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<GeneroEntity> getFranquia(@PathVariable(name = "id") Long id) {
-        Optional<GeneroEntity> franquia = generoRepository.findById(id);
-        if (franquia.isPresent()) {
-            return ResponseEntity.ok(franquia.get());
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+    public GeneroDTO getGenero(@PathVariable(name = "id") Long id) {
+        return generoService.getById(id);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteFranquia(@PathVariable(name = "id") Long id) {
-        generoRepository.deleteById(id);
+    public void deleteGenero(@PathVariable(name = "id") Long id) {
+        generoService.delete(id);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<GeneroEntity> updateFranquia(@PathVariable(name = "id") Long id,
-                                                         @RequestBody String novoNome) {
-        Optional<GeneroEntity> entity = generoRepository.findById(id);
-        if (entity.isPresent()) {
-            entity.get().setNome(novoNome);
-            return ResponseEntity.ok(generoRepository.save(entity.get()));
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+    public GeneroDTO updateGenero(@PathVariable(name = "id") Long id, @RequestBody String novoNome) {
+        return generoService.update(id, novoNome);
     }
 }
