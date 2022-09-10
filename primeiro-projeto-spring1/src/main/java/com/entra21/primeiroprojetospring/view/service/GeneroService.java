@@ -37,6 +37,8 @@ public class GeneroService {
         generoRepository.save(newEntity);
     }
 
+
+
     public void delete(Long id) {
         generoRepository.deleteById(id);
     }
