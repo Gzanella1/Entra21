@@ -1,0 +1,1 @@
+npm e responsavel por baixar todos os arquivo e o npx executa

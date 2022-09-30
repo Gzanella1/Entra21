@@ -1,0 +1,55 @@
+baixar o node.js
+
+o que é ?
+npm-> 
+npx->
+
+------------------------------------------------
+abre o console do vscode e digita :
+
+npm install --save-dev typescript
+
+em package.json
+ criar :
+
+"scripts": {
+    "build":"tsc"
+  }
+
+abre o console do vscode e digita :
+npx tsc --init
+
+na pasta tsconfig.json procura os dois abaixo e descomenta, depois acrecenta o  do src e build
+
+"rootDir": "src",   -> pasta onde está o codigo fonte
+"outDir": "build",  ->
+
+feito isso va e cria uma pasta nova chamada -> src
+em src cria um arquivo novo chamado index.ts
+
+abre o console do vscode e digita :
+npm run build
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
