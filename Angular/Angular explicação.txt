@@ -1,0 +1,21 @@
+digite no terminal do vscode para gerar um novo componente:
+npm run ng generate component hello-world
+
+
+
+
+chrome://flags/s
+
+flex estica o componente ao maximo
+
+
+
+
+
+Entra na sua pasta do git
+
+npx -p @angular/cli ng new FirstAngularProject
+y
+cd FirstAngularProject
+npm run ng serve --open
+y
